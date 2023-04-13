@@ -19,7 +19,7 @@
   <div style="color: #aaa; font-size: 17px">
   <span id="visits">undefined</span> times visited.
   </p>
-  <!-- <script async src="https://api.countapi.xyz/hit/subway.herrerde.xyz/?callback=websiteVisits"></script> -->
+  <script async src="https://api.countapi.xyz/hit/subway.herrerde.xyz/?callback=websiteVisits"></script>
   <script>
     function websiteVisits(response) {
       document.querySelector("#visits").textContent = response.value;
