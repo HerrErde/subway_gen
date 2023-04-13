@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    image: ghcr.io/herrerde/subway_gen
+    container_name: subway_gen
+    restart: unless-stopped
+    ports:
+      - 80:80
+    volumes:
+      - ./web/src/:/var/www/html
+      - ./web/php/:/etc/php/5.6/apache2/

@@ -1,19 +1,12 @@
 <?php
-$required_params = [
-  "hoverboards",
-  "gamekeys",
-  "gamecoins",
-  "scoreboosters",
-  "headstarts",
-  "eventcoins",
-];
+$required_params = ["highscore"];
 
 session_start();
 
 foreach ($required_params as $param) {
   if (!isset($_GET[$param])) {
     $_SESSION["error"] = "Failed to generate. Try again.";
-    header("Location:../code/wallet.php");
+    header("Location:../code/toprun.php");
     exit();
   }
 }
@@ -22,10 +15,11 @@ foreach ($required_params as $param) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Code for the wallet.json file</title>
+    <title>Code for the toprun.json file</title>
     <script src="../assets/js/script.js"></script>
     <script>
-      var filename = 'wallet.json';
+      var filename1 = 'toprun.json';
+      var filename2 = 'user_stats.json';
     </script>
     <?php require "../require/connect.php"; ?>
   </head>
@@ -42,10 +36,21 @@ foreach ($required_params as $param) {
         own risk.
     </p>
     </header>
-  <textarea name="textarea" rows="35" cols="35" readonly>
-    <?php require "../code/wallet.php"; ?>
+  <textarea id="textarea1" rows="35" cols="35" readonly>
+    <?php require "../code/toprun.php"; ?>
   </textarea>
-    <?php require "../require/down-copy.php"; ?>
+  <textarea id="textarea2" rows="35" cols="35" readonly>
+    <?php require "../code/user_stats.php"; ?>
+  </textarea>
+  
+  <form method="post">
+  <div class="btn btn-success download" style="display: inline-block">
+    <a onclick="download2Json('textarea1', 'toprun.json')">Top Run</a>
+  </div>
+  <div class="btn btn-success download" style="display: inline-block">
+    <a onclick="download2Json('textarea2', 'user_stats.json')">User Stats</a>
+  </div>
+</form>
 
     <?php require "../require/buttons.php"; ?>
     <br /><br /><br />

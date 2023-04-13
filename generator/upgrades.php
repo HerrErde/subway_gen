@@ -1,11 +1,9 @@
 <?php
 $required_params = [
-  "hoverboards",
-  "gamekeys",
-  "gamecoins",
-  "scoreboosters",
-  "headstarts",
-  "eventcoins",
+  "jetpack",
+  "superSneakers",
+  "magnet",
+  "doubleScore"
 ];
 
 session_start();
@@ -13,7 +11,7 @@ session_start();
 foreach ($required_params as $param) {
   if (!isset($_GET[$param])) {
     $_SESSION["error"] = "Failed to generate. Try again.";
-    header("Location:../code/wallet.php");
+    header("Location:../code/upgrades.php");
     exit();
   }
 }
@@ -22,17 +20,15 @@ foreach ($required_params as $param) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Code for the wallet.json file</title>
+    <title>Code for the upgrades.json file</title>
     <script src="../assets/js/script.js"></script>
-    <script>
-      var filename = 'wallet.json';
-    </script>
+    <script>var filename = 'upgrades.json';</script>
     <?php require "../require/connect.php"; ?>
   </head>
 
   <body>
     <header>
-      <h1>Code for the Wallet</h1>
+      <h1>Code for the upgrades.json file</h1>
       <p id="title">
         Copy the generated code, find the file wallet.json in the folder
         "profile" and paste it there.
@@ -42,8 +38,8 @@ foreach ($required_params as $param) {
         own risk.
     </p>
     </header>
-  <textarea name="textarea" rows="35" cols="35" readonly>
-    <?php require "../code/wallet.php"; ?>
+    <textarea name="textarea" rows="35" cols="35" readonly>
+    <?php require "../code/upgrades.php"; ?>
   </textarea>
     <?php require "../require/down-copy.php"; ?>
 

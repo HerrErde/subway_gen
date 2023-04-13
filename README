@@ -1,1 +1,0 @@
-By this project, I want to state on a bug in the game Subway Surfers created by Kiloo that isn't fixed yet. Storing data in JSON wihtout an encryptation isn't the best idea, so stay away of that if you're a programmer. If you encrypt your data, you're good.

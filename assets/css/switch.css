@@ -1,0 +1,33 @@
+.checkbox {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+#doublecoins:checked + .slider {
+  background-color: #2196f3;
+}
+
+#doublecoins:checked + .slider:before {
+  transform: translateX(26px);
+}
