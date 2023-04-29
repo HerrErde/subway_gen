@@ -27,7 +27,8 @@ session_destroy();
   <form method="get" action="../generator/toprun.php">
     <fieldset>
       <legend>Game data</legend>
-      <label for="number">Highscore:</label><br> <input type="number" name="highscore" required min="0"
+      <label>Highscore:</label><br>
+      <input type="number" name="highscore" required min="0"
         max="9223372036854775807">
       <font color="red">*</font><br>
     </fieldset>

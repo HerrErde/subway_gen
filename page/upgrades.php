@@ -27,15 +27,15 @@ session_destroy();
   <form method="get" action="../generator/upgrades.php">
     <fieldset>
       <legend>Game data</legend>
-      <label for="number">Jetpack:</label><br> <input type="number" name="jetpack" required min="0" max="6">
+      <label>Jetpack:</label><br> <input type="number" name="jetpack" required min="0" max="6">
       <font color="red">*</font><br>
-      <label for="number">Super Sneakers:</label><br> <input type="number" name="superSneakers" required min="0" max="6">
+      <label>Super Sneakers:</label><br> <input type="number" name="superSneakers" required min="0" max="6">
       <font color="red">*</font><br>
-      <label for="number">Magnet:</label><br> <input type="number" name="magnet" required min="0" max="6">
+      <label>Magnet:</label><br> <input type="number" name="magnet" required min="0" max="6">
       <font color="red">*</font><br>
-      <label for="number">Double Score:</label><br> <input type="number" name="doubleScore" required min="0" max="6">
+      <label>Double Score:</label><br> <input type="number" name="doubleScore" required min="0" max="6">
       <font color="red">*</font><br>
-      <label for="number">Double Coins:</label><br> <input type="checkbox" name="doublecoins" id="doublecoins" class="checkbox" checked disabled>
+      <label>Double Coins:</label><br> <input type="checkbox" name="doublecoins" id="doublecoins" class="checkbox" checked disabled>
       <label for="doublecoins" class="slider"></label>
     </fieldset>
     <br><input type="submit" class="btn btn-success">

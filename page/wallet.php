@@ -27,22 +27,22 @@ session_destroy();
   <form method="get" action="../generator/wallet.php">
     <fieldset>
       <legend>Game data</legend>
-      <label for="number">Hoverboards:</label><br> <input type="number" name="hoverboards" required min="0"
+      <label>Hoverboards:</label><br> <input type="number" name="hoverboards" required min="0"
         max="2147483647">
       <font color="red">*</font>
       </la><br>
-      <label for="number">Game keys:</label><br> <input type="number" name="gamekeys" required min="0" max="2147483647">
+      <label>Game keys:</label><br> <input type="number" name="gamekeys" required min="0" max="2147483647">
       <font color="red">*</font><br>
-      <label for="number">Game coins:</label><br> <input type="number" name="gamecoins" required min="0"
+      <label>Game coins:</label><br> <input type="number" name="gamecoins" required min="0"
         max="2147483647">
       <font color="red">*</font><br>
-      <label for="number">Score Boosters:</label><br> <input type="number" name="scoreboosters" required min="0"
+      <label>Score Boosters:</label><br> <input type="number" name="scoreboosters" required min="0"
         max="2147483647">
       <font color="red">*</font><br>
-      <label for="number">Headstarts:</label><br> <input type="number" name="headstarts" required min="0"
+      <label>Headstarts:</label><br> <input type="number" name="headstarts" required min="0"
         max="2147483647">
       <font color="red">*</font><br>
-      <label for="number">Eventcoins:</label><br> <input type="number" name="eventcoins" required min="0"
+      <label>Eventcoins:</label><br> <input type="number" name="eventcoins" required min="0"
         max="2147483647">
       <font color="red">*</font><br>
     </fieldset>
