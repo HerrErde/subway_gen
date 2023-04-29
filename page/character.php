@@ -82,10 +82,11 @@ session_destroy();
 
         // Generate HTML code for displaying the item name and image
         echo "<div style=\"display: inline-block;\">
-        <input type=\"checkbox\">
-        <label id=\"selector\">" . $item_name . "</label><br>
-        <img src=\"https://static.wikia.nocookie.net/subwaysurf/images/c/c8/" . urlencode($item_name) . "1.png\">// Encode the item name to be used in the image URL
-        </div>"; 
+        <input id=\"select\" type=\"checkbox\">
+        <label id=\"select\">" . $item_name . "</label><br>
+        <img src=\"https://static.wikia.nocookie.net/subwaysurf/images/c/c8/" . urlencode($item_name) . // Encode the item name to be used in the image URL
+          "1.png\">
+        </div>";
       }
 
       // Print a closing </div> tag to the output

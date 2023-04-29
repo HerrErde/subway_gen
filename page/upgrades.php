@@ -36,7 +36,7 @@ session_destroy();
       <label>Double Score:</label><br> <input type="number" name="doubleScore" required min="0" max="6">
       <font color="red">*</font><br>
       <label>Double Coins:</label><br> <input type="checkbox" name="doublecoins" id="doublecoins" class="checkbox" checked disabled>
-      <label for="doublecoins" class="slider"></label>
+      <label class="slider"></label>
     </fieldset>
     <br><input type="submit" class="btn btn-success">
   </form>

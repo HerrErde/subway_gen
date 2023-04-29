@@ -63,7 +63,7 @@ label {
   color: lightgreen;
   font-size: 21px;
 }
-label#selector {
+label#select {
   color: cyan;
 }
 #warning {
@@ -108,7 +108,7 @@ label#selector {
   opacity: 1;
 }
 
-input[type='checkbox'] {
+input[type='checkbox']#select {
   color: transparent;
   appearance: none;
   display: inline-block;
@@ -122,7 +122,7 @@ input[type='checkbox'] {
   background: #fff;
   border: solid var(--color-subtle);
 }
-input[type='checkbox']:checked {
+input[type='checkbox']#select:checked {
   background-color: #0edf18;
 }
 
