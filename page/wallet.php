@@ -46,7 +46,16 @@ session_destroy();
         max="2147483647">
       <font color="red">*</font><br>
     </fieldset>
-    <br><input type="submit" class="btn btn-success">
+    <br>
+    <div class="copy" style="display: inline-block">
+    <a
+      class="fa fa-pen-to-square fa-2x"
+      style="cursor: pointer;"
+      href="../editor/wallet-editor.php"
+    >
+    </a>
+  </div>
+  <input type="submit" class="btn btn-success">
   </form>
 
   <?php require "../require/footer.php"; ?>
