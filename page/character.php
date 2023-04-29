@@ -66,7 +66,6 @@ session_destroy();
         "</div>";
       ?>
 
-
       <?php
       // Loop through each item in the array
       foreach ($items as $item) {
@@ -82,12 +81,11 @@ session_destroy();
         }
 
         // Generate HTML code for displaying the item name and image
-        echo "<div style=\"display: inline-block;\"><input type=\"checkbox\">" .
-          $item_name .
-          "<br><img src=\"https://static.wikia.nocookie.net/subwaysurf/images/c/c8/" .
-          urlencode($item_name) . // Encode the item name to be used in the image URL
-          "1.png\">
-          </div>";
+        echo "<div style=\"display: inline-block;\">
+        <input type=\"checkbox\">
+        <label id=\"selector\">" . $item_name . "</label><br>
+        <img src=\"https://static.wikia.nocookie.net/subwaysurf/images/c/c8/" . urlencode($item_name) . "1.png\">// Encode the item name to be used in the image URL
+        </div>"; 
       }
 
       // Print a closing </div> tag to the output

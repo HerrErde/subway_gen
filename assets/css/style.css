@@ -63,6 +63,9 @@ label {
   color: lightgreen;
   font-size: 21px;
 }
+label#selector {
+  color: cyan;
+}
 #warning {
   color: red;
   text-decoration: underline;
@@ -92,19 +95,35 @@ label {
   border-radius: 1px;
   cursor: pointer;
 }
-
 .copy {
   cursor: pointer;
   position: relative;
-  align-items: center;
   opacity: 0.6;
   transition: all 0.1s ease;
-  bottom: 10px;
   right: 10px;
+  top: 5px;
 }
 .copy:hover {
   transform: translateY(-4px);
   opacity: 1;
+}
+
+input[type='checkbox'] {
+  color: transparent;
+  appearance: none;
+  display: inline-block;
+  vertical-align: bottom;
+  cursor: pointer;
+  height: 22px;
+  width: 22px;
+  margin-bottom: 0em;
+  margin-right: 0.5em;
+  border-radius: 5px;
+  background: #fff;
+  border: solid var(--color-subtle);
+}
+input[type='checkbox']:checked {
+  background-color: #0edf18;
 }
 
 .download {
