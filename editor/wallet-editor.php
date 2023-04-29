@@ -37,10 +37,8 @@ $required_params = [
 <div>
     <textarea id="textarea" rows="30" cols="30" readonly></textarea>
 </div>
-  <form>
-  <div class="btn btn-success download" style="display: inline-block">
-    <a onclick="downloadJson()">Download</a>
-  </div>
+<?php require "../require/down-copy.php"; ?>
+
   </form>
     <script>
         // Function to read and display JSON contents in textarea
