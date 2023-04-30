@@ -66,39 +66,47 @@ session_destroy();
         "</div>";
       ?>
 
-      <?php
-      // Loop through each item in the array
-      foreach ($items as $item) {
-        // Remove any leading or trailing whitespace from the item
-        $item_name = trim($item);
+<?php
+// Set the API endpoint and query parameters
+//$api_url = "https://subwaysurf-api.herrerde.xyz/api/images/character.php";
+$api_url = "http://127.0.0.1:8000/api/images/character.php";
+$params = array(
+  "search" => $item_name
+);
 
-        // Check if the item contains parentheses or is empty
-        if (
-          preg_match("/\(.+\)/", $item_name) || // Check if the item contains parentheses
-          preg_match('/^\s*$/', $item_name) // Check if the item is empty
-        ) {
-          continue; // Skip the rest of the loop for this item
-        }
+// Build the URL with query parameters
+$url = $api_url . "?" . http_build_query($params);
 
-        // Generate HTML code for displaying the item name and image
-        echo "<div style=\"display: inline-block;\">
-        <input id=\"select\" type=\"checkbox\">
-        <label id=\"select\">" . $item_name . "</label><br>
-        <img src=\"https://static.wikia.nocookie.net/subwaysurf/images/c/c8/" . urlencode($item_name) . // Encode the item name to be used in the image URL
-          "1.png\">
-        </div>";
-      }
+// Make the API request and get the response as a JSON string
+$response = file_get_contents($url);
 
-      // Print a closing </div> tag to the output
-      echo "</div>";
-      ?>
+// Parse the JSON string into an array of objects
+$items = json_decode($response);
 
-    </fieldset>
-    </form>
+// Start the HTML output
+echo "<div>";
 
-    <br><input type="submit" class="btn btn-success">
+// Loop through each item in the array
+foreach ($items as $item) {
+  // Generate HTML code for displaying the item name and image
+  echo "<div class=\"item\">
+  <input id=\"select\" type=\"checkbox\">
+  <label id=\"select\">" . $item->name . "</label><br>
+  <img data-src=\"" . $item->img . "\">
+  </div>";
+}
 
-    <br><br><br>
-    <?php require "../require/footer.php"; ?>
+// Print a closing </div> tag to the output
+echo "</div>";
+?>
+<script src="../assets/js/load-scroll.js"></script>
+
+  </fieldset>
+</form>
+
+<br><input type="submit" class="btn btn-success">
+
+<br><br><br>
+<?php require "../require/footer.php"; ?>
 
 </html>

@@ -44,11 +44,6 @@ hr {
   background-color: gray;
   color: gray;
 }
-img {
-  width: auto;
-  max-width: 600px;
-  height: 100%;
-}
 input {
   padding: 10px;
   margin: 10px 0px;
@@ -66,20 +61,29 @@ label {
 label#select {
   color: cyan;
 }
+
+.item {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.item img {
+  max-width: 400px;
+  height: 190px;
+  margin-bottom: 10px;
+}
+
+.item label {
+  font-weight: bold;
+}
+
 #warning {
   color: red;
   text-decoration: underline;
   font-weight: bold;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-}
-.grid-item {
-  padding: 5px;
-  border: 1px solid #ccc;
 }
 
 .clipboard.icon {
@@ -107,6 +111,10 @@ label#select {
   transform: translateY(-4px);
   opacity: 1;
 }
+.download {
+  position: relative;
+  overflow: hidden;
+}
 
 input[type='checkbox']#select {
   color: transparent;
@@ -123,37 +131,10 @@ input[type='checkbox']#select {
   border: solid var(--color-subtle);
 }
 input[type='checkbox']#select:checked {
-  background-color: #0edf18;
+  background-color: #00ff00;
 }
 
-.download {
-  position: relative;
-  overflow: hidden;
-}
 
-.btn-upload-input {
-  position: relative;
-  overflow: hidden;
-  margin: 0px;
-  background-color: #fff;
-  border-color: #ccc;
-  padding: 8px 16px 7px;
-}
-.btn-upload-input input[type='file'] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-.btn-upload-input-title {
-  color: #000000;
-  margin-left: 2px;
-}
 
 .version-info {
   margin-bottom: 10px;
@@ -201,6 +182,29 @@ input[type='checkbox']#select:checked {
   }
 }
 
+.btn-upload-input {
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  background-color: #fff;
+  border-color: #ccc;
+  padding: 8px 16px 7px;
+}
+.btn-upload-input input[type='file'] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.btn-upload-input-title {
+  color: #000000;
+  margin-left: 2px;
+}
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -267,5 +271,25 @@ input[type='checkbox']#select:checked {
   }
   .btn {
     margin: 1px;
+  }
+  /* Style for the item container */
+  .item {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  /* Style for the item image */
+  .item img {
+    height: 120px;
+    max-width: 110px;
+    margin-bottom: 60px;
+  }
+
+  /* Style for the item label */
+  .item label {
+    font-weight: bold;
   }
 }
