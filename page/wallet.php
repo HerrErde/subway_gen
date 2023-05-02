@@ -29,22 +29,22 @@ session_destroy();
       <legend>Game data</legend>
       <label>Hoverboards:</label><br> <input type="number" name="hoverboards" required min="0"
         max="2147483647">
-      <font color="red">*</font>
+      <span class="required">*</span>
       </la><br>
       <label>Game keys:</label><br> <input type="number" name="gamekeys" required min="0" max="2147483647">
-      <font color="red">*</font><br>
+      <span class="required">*</span><br>
       <label>Game coins:</label><br> <input type="number" name="gamecoins" required min="0"
         max="2147483647">
-      <font color="red">*</font><br>
+      <span class="required">*</span><br>
       <label>Score Boosters:</label><br> <input type="number" name="scoreboosters" required min="0"
         max="2147483647">
-      <font color="red">*</font><br>
+      <span class="required">*</span><br>
       <label>Headstarts:</label><br> <input type="number" name="headstarts" required min="0"
         max="2147483647">
-      <font color="red">*</font><br>
+      <span class="required">*</span><br>
       <label>Eventcoins:</label><br> <input type="number" name="eventcoins" required min="0"
         max="2147483647">
-      <font color="red">*</font><br>
+      <span class="required">*</span><br>
     </fieldset>
     <br>
 <!--     <div class="copy" style="display: inline-block">

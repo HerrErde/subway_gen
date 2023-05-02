@@ -61,6 +61,9 @@ label {
 label#select {
   color: cyan;
 }
+.required {
+  color: red;
+}
 
 .item {
   display: inline-block;
@@ -117,24 +120,16 @@ label#select {
 }
 
 input[type='checkbox']#select {
-  color: transparent;
-  appearance: none;
-  display: inline-block;
   vertical-align: bottom;
-  cursor: pointer;
-  height: 22px;
-  width: 22px;
   margin-bottom: 0em;
   margin-right: 0.5em;
   border-radius: 5px;
-  background: #fff;
-  border: solid var(--color-subtle);
+  content: '';
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
 }
-input[type='checkbox']#select:checked {
-  background-color: #00ff00;
-}
-
-
 
 .version-info {
   margin-bottom: 10px;

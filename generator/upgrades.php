@@ -3,16 +3,21 @@ $required_params = [
   "jetpack",
   "superSneakers",
   "magnet",
-  "doubleScore"
+  "doubleScore",
+  "doubleCoinsAmount"
 ];
 
 session_start();
 
 foreach ($required_params as $param) {
-  if (!isset($_GET[$param])) {
-    $_SESSION["error"] = "Failed to generate. Try again.";
-    header("Location:../code/upgrades.php");
-    exit();
+  if ($param === "doubleCoinsAmount") {
+    $_GET[$param] = isset($_GET[$param]) && !empty($_GET[$param]) ? $_GET[$param] : 1;
+  } else {
+    if (!isset($_GET[$param])) {
+      $_SESSION["error"] = "Failed to generate. Try again.";
+      header("Location:../code/upgrades.php");
+      exit();
+    }
   }
 }
 ?>

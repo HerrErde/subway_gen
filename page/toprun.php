@@ -30,7 +30,7 @@ session_destroy();
       <label>Highscore:</label><br>
       <input type="number" name="highscore" required min="0"
         max="9223372036854775807">
-      <font color="red">*</font><br>
+      <span class="required">*</span><br>
     </fieldset>
     <br><input type="submit" class="btn btn-success">
   </form>
