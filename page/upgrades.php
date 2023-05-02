@@ -1,9 +1,3 @@
-<?php
-session_start();
-$warn = isset($_SESSION["error"]) ? $_SESSION["error"] : "";
-session_destroy();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +6,6 @@ session_destroy();
     <?php require "../require/buttons.php"; ?>
   </head>
   <body>
-    <p><?php echo $warn; ?></p>
     <header>
       <h1>Generate your Upgrades</h1>
       <p id="title">Fill out the options and generate your customized JSON template code.</p>

@@ -1,11 +1,3 @@
-<?php
-$warn = "";
-session_start();
-if (isset($_SESSION["error"])) {
-  $warn = $_SESSION["error"];
-}
-session_destroy();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,12 +8,9 @@ session_destroy();
 </head>
 
 <body>
-  <p>
-    <?php echo "$warn"; ?>
-  </p>
   <header>
     <h1>Generate your Characters</h1>
-    <p id="title">Fill the out the options and generate your customized JSON template code.</p>
+    <p id="title">Fill out the options and generate your customized JSON template code.</p>
   </header>
 
   <form method="get" action="../code/wallet.php">

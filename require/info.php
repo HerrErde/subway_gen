@@ -18,7 +18,7 @@
       <li>Navigate between the folders.</li>
       <li>Android > data > com.kiloo.subwaysurf > files > profile</li>
       <li>
-        Copy the generated code, find the file in the folder "profile" and paste
+        Download or copy the generated code, find the file in the folder "profile" and paste
         it there.
       </li>
     </ol>

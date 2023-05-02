@@ -26,9 +26,9 @@ foreach ($required_params as $param) {
 
   <body>
     <header>
-      <h1>Code for the Wallet</h1>
+      <h1>Code for your Highscore</h1>
       <p id="title">
-        Copy the generated code, find the file wallet.json in the folder
+        Download or copy the generated code, find the file wallet.json in the folder
         "profile" and paste it there.
       </p>
       <p id="warning">
