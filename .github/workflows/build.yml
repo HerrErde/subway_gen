@@ -34,7 +34,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           flavor: |
-            latest=${{ github.ref == 'refs/heads/master' }}
+            latest=auto
             
       - name: Build and push AMD64, ARM64
         uses: docker/build-push-action@v4.0.0

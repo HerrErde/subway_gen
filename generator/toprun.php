@@ -6,7 +6,7 @@ session_start();
 foreach ($required_params as $param) {
   if (!isset($_GET[$param])) {
     $_SESSION["error"] = "Failed to generate. Try again.";
-    header("Location:../code/toprun.php");
+    header("Location:../code/top_run.php");
     exit();
   }
 }
@@ -15,7 +15,7 @@ foreach ($required_params as $param) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Code for the toprun.json file</title>
+    <title>Code for the top_run.json file</title>
     <script src="../assets/js/script.js"></script>
     <script>
       var filename1 = 'toprun.json';
@@ -37,7 +37,7 @@ foreach ($required_params as $param) {
     </p>
     </header>
   <textarea id="textarea1" rows="35" cols="35" readonly>
-    <?php require "../code/toprun.php"; ?>
+    <?php require "../code/top_run.php"; ?>
   </textarea>
   <textarea id="textarea2" rows="35" cols="35" readonly>
     <?php require "../code/user_stats.php"; ?>
