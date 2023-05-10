@@ -76,6 +76,9 @@ label#select {
 .required {
   color: red;
 }
+form {
+  padding-bottom: 72px;
+}
 
 .item {
   display: inline-block;

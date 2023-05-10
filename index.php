@@ -15,17 +15,6 @@
   </header>
   <?php require "require/info.php"; ?>
 
-  <br><br><br>
-  <div style="color: #aaa; font-size: 17px">
-  <span id="visits">undefined</span> times visited.
-  </p>
-  <script async src="https://api.countapi.xyz/hit/subway.herrerde.xyz/?callback=websiteVisits"></script>
-  <script>
-    function websiteVisits(response) {
-      document.querySelector("#visits").textContent = response.value;
-    }
-  </script>
-  </div>
   <?php require "require/footer.php"; ?>
 
 </html>

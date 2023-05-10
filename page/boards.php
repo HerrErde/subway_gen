@@ -95,7 +95,6 @@ echo "</div>";
 
 <br><input type="submit" class="btn btn-success">
 
-<br><br><br>
 <?php require "../require/footer.php"; ?>
 
 </html>

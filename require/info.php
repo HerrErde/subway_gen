@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/githubRelease.js"></script>
   </head>
   <body>
     <h2 style="text-align: center">Android Tutorial</h2>
@@ -38,8 +39,8 @@
       <span>v<?= $json["version"] ?></span>
     </div>
     <div>
-      <span>Latest Season:</span>
-      <span><?= $json["season"] ?></span>
+      <span>Next Release:</span>
+      <span id="release"></span>
     </div>
   </div>
   <div class="version-column">

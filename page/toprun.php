@@ -24,7 +24,6 @@
     <br><input type="submit" class="btn btn-success">
   </form>
 
-  <br><br><br>
   <?php require "../require/footer.php"; ?>
 
 </html>
