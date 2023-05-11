@@ -7,18 +7,22 @@ $required_params = [
   "doubleCoinsAmount"
 ];
 
-session_start();
+$errors = [];
 
 foreach ($required_params as $param) {
-  if ($param === "doubleCoinsAmount") {
-    $_GET[$param] = isset($_GET[$param]) && !empty($_GET[$param]) ? $_GET[$param] : 1;
+  if ($param === "doubleCoinsAmount" && empty($_GET[$param])) {
+    $_GET[$param] = 1;
   } else {
-    if (!isset($_GET[$param])) {
-      $_SESSION["error"] = "Failed to generate. Try again.";
-      header("Location:../code/upgrades.php");
-      exit();
+    if (empty($_GET[$param])) {
+      $errors[] = "Failed to generate. Try again.";
     }
   }
+}
+
+if (!empty($errors)) {
+  $_SESSION["error"] = implode("<br>", $errors);
+  header("Location:../code/upgrades.php");
+  exit();
 }
 ?>
 
@@ -26,9 +30,9 @@ foreach ($required_params as $param) {
 <html lang="en">
   <head>
     <title>Code for the upgrades.json file</title>
+    <?php require "../require/connect.php"; ?>
     <script src="../assets/js/script.js"></script>
     <script>var filename = 'upgrades.json';</script>
-    <?php require "../require/connect.php"; ?>
   </head>
 
   <body>
@@ -41,15 +45,11 @@ foreach ($required_params as $param) {
       <p id="warning">
         Note that this may restart some statistics and you're using it at your
         own risk.
-    </p>
+      </p>
     </header>
-    <textarea name="textarea" rows="35" cols="35" readonly>
-    <?php require "../code/upgrades.php"; ?>
-  </textarea>
+    <textarea name="textarea" rows="35" cols="35" readonly><?php require "../code/upgrades.php"; ?></textarea>
     <?php require "../require/down-copy.php"; ?>
-
     <?php require "../require/buttons.php"; ?>
-    <br /><br /><br />
     <?php require "../require/footer.php"; ?>
   </body>
 </html>

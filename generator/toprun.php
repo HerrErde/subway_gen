@@ -16,12 +16,12 @@ foreach ($required_params as $param) {
 <html lang="en">
   <head>
     <title>Code for the top_run.json file</title>
+    <?php require "../require/connect.php"; ?>
     <script src="../assets/js/script.js"></script>
     <script>
       var filename1 = 'toprun.json';
       var filename2 = 'user_stats.json';
     </script>
-    <?php require "../require/connect.php"; ?>
   </head>
 
   <body>
@@ -53,7 +53,6 @@ foreach ($required_params as $param) {
 </form>
 
     <?php require "../require/buttons.php"; ?>
-    <br /><br /><br />
     <?php require "../require/footer.php"; ?>
   </body>
 </html>

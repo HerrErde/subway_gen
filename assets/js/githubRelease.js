@@ -10,7 +10,9 @@ let latestRelease = null;
 let lastFetchTime = 0;
 
 async function fetchLatestRelease() {
-  const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`);
+  const response = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/releases/latest`
+  );
 
   if (!response.ok) {
     console.log('Failed to get latest release.');
@@ -21,26 +23,25 @@ async function fetchLatestRelease() {
 }
 
 async function updateRelease() {
-  const now = Date.now();
-  const timeSinceLastFetch = now - lastFetchTime;
-
-  if (!latestRelease || timeSinceLastFetch > MILLISECONDS_PER_HOUR) {
-    latestRelease = await fetchLatestRelease();
-    lastFetchTime = now;
-  }
-
   if (!latestRelease) {
-    return;
+    latestRelease = await fetchLatestRelease();
   }
-
   const releaseDate = new Date(latestRelease.published_at);
-  const timeSinceRelease = now - releaseDate;
+  const timeSinceRelease = Date.now() - releaseDate;
 
-  const timeUntilNextRelease = MILLISECONDS_PER_RELEASE_CYCLE - timeSinceRelease % MILLISECONDS_PER_RELEASE_CYCLE;
+  const timeUntilNextRelease =
+    MILLISECONDS_PER_RELEASE_CYCLE -
+    (timeSinceRelease % MILLISECONDS_PER_RELEASE_CYCLE);
 
-  const daysUntilNextRelease = Math.floor(timeUntilNextRelease / MILLISECONDS_PER_DAY);
-  const hoursUntilNextRelease = Math.floor((timeUntilNextRelease % MILLISECONDS_PER_DAY) / MILLISECONDS_PER_HOUR);
-  const minutesUntilNextRelease = Math.floor((timeUntilNextRelease % MILLISECONDS_PER_HOUR) / MILLISECONDS_PER_MINUTE);
+  const daysUntilNextRelease = Math.floor(
+    timeUntilNextRelease / MILLISECONDS_PER_DAY
+  );
+  const hoursUntilNextRelease = Math.floor(
+    (timeUntilNextRelease % MILLISECONDS_PER_DAY) / MILLISECONDS_PER_HOUR
+  );
+  const minutesUntilNextRelease = Math.floor(
+    (timeUntilNextRelease % MILLISECONDS_PER_HOUR) / MILLISECONDS_PER_MINUTE
+  );
 
   const releaseElement = document.getElementById('release');
   releaseElement.textContent = `~${daysUntilNextRelease}d ${hoursUntilNextRelease}h ${minutesUntilNextRelease}m`;

@@ -34,10 +34,7 @@ a {
   color: #fff;
   text-decoration: none;
 }
-#title {
-  color: #aaa;
-  font-size: 25px;
-}
+
 textarea {
   padding: 5px;
   margin-bottom: 10px;
@@ -63,21 +60,30 @@ input {
   border-radius: 15px;
   width: 100px;
 }
-legend {
-  font-size: 180%;
+input[type='checkbox'].item {
+  vertical-align: bottom;
+  margin-bottom: 0em;
+  margin-right: 0.5em;
+  border-radius: 5px;
+  content: '';
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  background-color: #ccc;
 }
 label {
   color: lightgreen;
   font-size: 21px;
 }
-label#select {
-  color: cyan;
+.buttons {
+  padding-bottom: 40px;
 }
+legend {
+  font-size: 180%;
+}
+
 .required {
   color: red;
-}
-form {
-  padding-bottom: 72px;
 }
 
 .item {
@@ -87,21 +93,23 @@ form {
   margin: 10px;
   text-align: center;
 }
-
 .item img {
-  max-width: 400px;
-  height: 190px;
-  margin-bottom: 10px;
+  max-width: 200px;
+  height: 180px;
 }
-
 .item label {
   font-weight: bold;
+  color: cyan;
 }
 
 #warning {
   color: red;
   text-decoration: underline;
   font-weight: bold;
+}
+#title {
+  color: #aaa;
+  font-size: 25px;
 }
 
 .clipboard.icon {
@@ -134,18 +142,6 @@ form {
   overflow: hidden;
 }
 
-input[type='checkbox']#select {
-  vertical-align: bottom;
-  margin-bottom: 0em;
-  margin-right: 0.5em;
-  border-radius: 5px;
-  content: '';
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
-  background-color: #ccc;
-}
-
 .version-info {
   margin-bottom: 10px;
   text-align: center;
@@ -164,7 +160,6 @@ input[type='checkbox']#select {
   animation: rainbow-blink 2s infinite;
   color: #ff0000;
 }
-
 @keyframes rainbow-blink {
   0% {
     color: #ff0000;

@@ -23,11 +23,9 @@ foreach ($required_params as $param) {
 <html lang="en">
   <head>
     <title>Code for the wallet.json file</title>
-    <script src="../assets/js/script.js"></script>
-    <script>
-      var filename = 'wallet.json';
-    </script>
     <?php require "../require/connect.php"; ?>
+    <script src="../assets/js/script.js"></script>
+    <script>var filename = 'wallet.json';</script>
   </head>
 
   <body>
@@ -40,15 +38,11 @@ foreach ($required_params as $param) {
       <p id="warning">
         Note that this may restart some statistics and you're using it at your
         own risk.
-    </p>
+      </p>
     </header>
-  <textarea name="textarea" rows="35" cols="35" readonly>
-    <?php require "../code/wallet.php"; ?>
-  </textarea>
+    <textarea name="textarea" rows="35" cols="35" readonly><?php require "../code/wallet.php"; ?></textarea>
     <?php require "../require/down-copy.php"; ?>
-
     <?php require "../require/buttons.php"; ?>
-    <br /><br /><br />
     <?php require "../require/footer.php"; ?>
   </body>
 </html>

@@ -3,6 +3,7 @@
     <i class="fab fa-github"></i>
     <a
       href="https://github.com/HerrErde/subway_gen"
+      target='_blank'
       >github.com/HerrErde/subway_gen</a
     >
     <?php
@@ -16,13 +17,13 @@
     $commit_url = "https://github.com/HerrErde/subway_gen/commit/$hash";
 
     // Output a link to the commit with the short hash
-    echo "<a class='link' href=\"$commit_url\">$short_hash</a>";
+    echo "<a class='link' href='$commit_url' target='_blank'>$short_hash</a>";
     ?>
   <hr />
   <p style="font-size: 15px">
     ©
     <?php echo date("Y"); ?>
-    <a href="https://dev.herrerde.xyz" class="rainbow">HerrErde</a>, all rights
+    <a class="rainbow" href="https://dev.herrerde.xyz" target='_blank'>HerrErde</a>, all rights
     reserved
   </p>
 </footer>

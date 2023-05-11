@@ -14,7 +14,5 @@
       src="/assets/img/subwaysurf-matrix.png">
   </header>
   <?php require "require/info.php"; ?>
-
   <?php require "require/footer.php"; ?>
-
 </html>
