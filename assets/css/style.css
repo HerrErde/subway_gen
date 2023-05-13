@@ -34,6 +34,20 @@ a {
   color: #fff;
   text-decoration: none;
 }
+label {
+  color: lightgreen;
+  font-size: 21px;
+}
+legend {
+  font-size: 180%;
+}
+hr {
+  width: 75%;
+  height: 2px;
+  border-width: 0;
+  background-color: gray;
+  color: gray;
+}
 
 textarea {
   padding: 5px;
@@ -46,13 +60,7 @@ textarea {
   font-size: 16px;
   resize: none;
 }
-hr {
-  width: 75%;
-  height: 2px;
-  border-width: 0;
-  background-color: gray;
-  color: gray;
-}
+
 input {
   padding: 10px;
   margin: 10px 0px;
@@ -70,16 +78,6 @@ input[type='checkbox'].item {
   width: 25px;
   height: 25px;
   background-color: #ccc;
-}
-label {
-  color: lightgreen;
-  font-size: 21px;
-}
-.buttons {
-  padding-bottom: 40px;
-}
-legend {
-  font-size: 180%;
 }
 
 .required {
@@ -187,6 +185,9 @@ legend {
   }
 }
 
+.buttons {
+  padding-bottom: 40px;
+}
 .btn-upload-input {
   position: relative;
   overflow: hidden;

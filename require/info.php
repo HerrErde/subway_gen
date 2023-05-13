@@ -6,12 +6,13 @@
     <script src="../assets/js/githubRelease.js"></script>
   </head>
   <body>
-    <h2 style="text-align: center">Android Tutorial</h2>
+    <h2>Android Tutorial</h2>
     <ol style="display: grid; place-items: center">
       <li>
         Download
         <a
           href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf"
+          style="color: lightgreen; text-decoration: underline"
           >Subway Surfers</a
         >.
       </li>
@@ -23,7 +24,7 @@
         it there.
       </li>
     </ol>
-    <h2 style="text-align: center">Available generators</h2>
+    <h2>Available generators</h2>
     <?php
     $url = "https://raw.githubusercontent.com/HerrErde/SubwayBooster/main/Android/data/com.kiloo.subwaysurf/files/version.json";
     $playapi = "https://gplayapi.srik.me/api/apps/com.kiloo.subwaysurf";
@@ -54,7 +55,5 @@
     </div>
   </div>
 </div>
-
-    <?php require "require/buttons.php"; ?>
   </body>
 </html>

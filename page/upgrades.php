@@ -37,7 +37,7 @@
           <label for="doubleCoins">Double Coins:</label>
           <label class="switch">
             <input type="checkbox" id="doubleCoins">
-            <span class="slider round"></span>
+            <span class="slider"></span>
           </label>
         </div>
         <div>

@@ -3,6 +3,7 @@
     <i class="fab fa-github"></i>
     <a
       href="https://github.com/HerrErde/subway_gen"
+      style="color: darkgray;"
       target='_blank'
       >github.com/HerrErde/subway_gen</a
     >
