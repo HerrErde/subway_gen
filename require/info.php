@@ -33,27 +33,31 @@
     $api = json_decode(file_get_contents($playapi), true);
     ?>
 
-<div class="version-info">
-  <div class="version-column">
-    <div>
-      <span>Latest Version:</span>
-      <span>v<?= $json["version"] ?></span>
+    <div class="version-info">
+      <div class="version-column">
+        <div>
+          <span>Season:</span>
+          <span><?= $json["season"] ?></span>
+        </div>
+        <div>
+          <span>Latest Version:</span>
+          <span>v<?= $json["version"] ?></span>
+        </div>
+        <div>
+          <span>Next Release:</span>
+          <span id="release"></span>
+        </div>
+      </div>
+      <div class="version-column">
+        <div>
+          <span>Latest App Version:</span>
+          <span><?= $api["version"] ?></span>
+        </div>
+        <div>
+          <span>Supported App Version:</span>
+          <span><?= $json["appversion"] ?></span>
+        </div>
+      </div>
     </div>
-    <div>
-      <span>Next Release:</span>
-      <span id="release"></span>
-    </div>
-  </div>
-  <div class="version-column">
-    <div>
-      <span>Latest App Version:</span>
-      <span><?= $api["version"] ?></span>
-    </div>
-    <div>
-      <span>Supported App Version:</span>
-      <span><?= $json["appversion"] ?></span>
-    </div>
-  </div>
-</div>
   </body>
 </html>
