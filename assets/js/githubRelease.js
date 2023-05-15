@@ -5,7 +5,7 @@ const repo = 'SubwayBooster';
 const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
 const MILLISECONDS_PER_HOUR = 1000 * 60 * 60;
 const MILLISECONDS_PER_MINUTE = 1000 * 60;
-const MILLISECONDS_PER_RELEASE_CYCLE = (21 * 24 + 10) * MILLISECONDS_PER_HOUR;
+const MILLISECONDS_PER_RELEASE_CYCLE = (21 * 24 + 8) * MILLISECONDS_PER_HOUR;
 
 // Define variables to store the latest release and the time of the last fetch
 let latestRelease = null;
@@ -34,7 +34,7 @@ async function updateRelease() {
   }
 
   // Calculate the time since the latest release and the time until the next release based on the release cycle
-  const releaseDate = new Date(latestRelease.published_at);
+  const releaseDate = new Date(latestRelease.published_at.substring(0, 10));
   const timeSinceRelease = Date.now() - releaseDate;
   const timeUntilNextRelease =
     MILLISECONDS_PER_RELEASE_CYCLE -
