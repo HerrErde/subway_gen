@@ -1,27 +1,27 @@
 <?php
-$required_params = ["highscore"];
+$required_params = ["highscore", "userstatsAmount"];
 
-session_start();
+$errors = [];
 
 foreach ($required_params as $param) {
-  if (!isset($_GET[$param])) {
-    $_SESSION["error"] = "Failed to generate. Try again.";
-    header("Location:../code/top_run.php");
-    exit();
+  if (($param === "userstatsAmount") && empty($_GET[$param])) {
+    $_GET[$param] = 2147483647;
+  } elseif (!isset($_GET[$param])) {
+    $errors[] = "Failed to generate. Try again.";
   }
 }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
+if (!empty($errors)) {
+  $_SESSION["error"] = implode("<br>", $errors);
+  header("Location:../code/top_run.php");
+  exit();
+} ?>
+
+
   <head>
     <title>Code for the top_run.json file</title>
     <?php require "../require/connect.php"; ?>
     <script src="../assets/js/download.js"></script>
-    <script>
-      var filename1 = 'toprun.json';
-      var filename2 = 'user_stats.json';
-    </script>
   </head>
 
   <body>
