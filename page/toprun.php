@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>Generate your Highscore</title>
-  <?php require "../require/connect.php"; ?>
-  <?php require "../require/buttons.php"; ?>
-</head>
+  <head>
+    <title>Generate your Highscore</title>
+    <?php require "../require/connect.php"; ?>
+    <?php require "../require/buttons.php"; ?>
+  </head>
 
   <body>
     <header>
@@ -25,7 +25,7 @@
           <div>
             <label for="userstats">Stats Score:</label>
             <label class="switch">
-              <input type="checkbox" id="userstats" />
+              <input type="checkbox" id="userstats">
               <span class="slider"></span>
             </label>
           </div>
@@ -40,7 +40,7 @@
               max="2147483647"
               required
               disabled
-            />
+           >
             <span class="required">*</span>
           </div>
 
@@ -53,10 +53,10 @@
               userstatsAmount.disabled = !userstats.checked;
             });
           </script>
-    </fieldset>
-      <br><input type="submit" class="btn btn-success">
-  </form>
+      </fieldset>
+    <input type="submit" class="btn btn-success">
+    </form>
+  </body>
 
   <?php require "../require/footer.php"; ?>
-
 </html>

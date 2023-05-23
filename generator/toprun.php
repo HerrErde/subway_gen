@@ -7,16 +7,20 @@ foreach ($required_params as $param) {
   if (($param === "userstatsAmount") && empty($_GET[$param])) {
     $_GET[$param] = 2147483647;
   } elseif (!isset($_GET[$param])) {
-    $errors[] = "Failed to generate. Try again.";
+    $errors[] = "Failed to generate. Please try again.";
   }
 }
 
 if (!empty($errors)) {
   $_SESSION["error"] = implode("<br>", $errors);
-  header("Location:../code/top_run.php");
+  header("Location:
+  ../code/top_run.php");
   exit();
-} ?>
+}
+?>
 
+<!DOCTYPE html>
+<html lang="en">
 
   <head>
     <title>Code for the top_run.json file</title>
@@ -28,31 +32,33 @@ if (!empty($errors)) {
     <header>
       <h1>Code for your Highscore</h1>
       <p id="title">
-        Download or copy the generated code, find the file wallet.json in the folder
-        "profile" and paste it there.
+        Download or copy the generated code, find the file wallet.json in the
+        folder "profile" and paste it there.
       </p>
       <p id="warning">
         Note that this may restart some statistics and you're using it at your
         own risk.
-    </p>
+      </p>
     </header>
-  <textarea id="textarea1" rows="35" cols="35" readonly>
-    <?php require "../code/top_run.php"; ?>
-  </textarea>
-  <textarea id="textarea2" rows="35" cols="35" readonly>
-    <?php require "../code/user_stats.php"; ?>
-  </textarea>
-  
-  <form method="post">
-  <div class="btn btn-success download" style="display: inline-block">
-    <i class="fa-solid fa-download"></i>
-    <a onclick="download2Json('textarea1', 'toprun.json')">Top Run</a>
-  </div>
-  <div class="btn btn-success download" style="display: inline-block">
-  <i class="fa-solid fa-download"></i>
-    <a onclick="download2Json('textarea2', 'user_stats.json')">User Stats</a>
-  </div>
-</form>
+    <textarea id="textarea1" rows="35" cols="35" readonly>
+      <?php require "../code/top_run.php"; ?>
+    </textarea>
+    <textarea id="textarea2" rows="35" cols="35" readonly>
+      <?php require "../code/user_stats.php"; ?>
+    </textarea>
+
+    <form method="post">
+      <div class="btn btn-success download" style="display: inline-block">
+        <i class="fa-solid fa-download"></i>
+        <a onclick="download2Json('textarea1', 'toprun.json')">Top Run</a>
+      </div>
+      <div class="btn btn-success download" style="display: inline-block">
+        <i class="fa-solid fa-download"></i>
+        <a onclick="download2Json('textarea2', 'user_stats.json')"
+          >User Stats</a
+        >
+      </div>
+    </form>
 
     <?php require "../require/buttons.php"; ?>
     <?php require "../require/footer.php"; ?>

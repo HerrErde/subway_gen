@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/githubRelease.js"></script>
   </head>
   <body>
@@ -20,8 +20,8 @@
       <li>Navigate between the folders.</li>
       <li>Android > data > com.kiloo.subwaysurf > files > profile</li>
       <li>
-        Download or copy the generated code, find the file in the folder "profile" and paste
-        it there.
+        Download or copy the generated code, find the file in the folder
+        "profile" and paste it there.
       </li>
     </ol>
     <h2>Available generators</h2>

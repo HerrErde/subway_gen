@@ -5,6 +5,7 @@
     <?php require "../require/connect.php"; ?>
     <?php require "../require/buttons.php"; ?>
   </head>
+
   <body>
     <header>
       <h1>Generate your Upgrades</h1>
@@ -16,29 +17,29 @@
       <fieldset>
         <div>
           <legend>Game data</legend>
-          <label>Jetpack:</label><br />
-          <input type="number" name="jetpack" required min="0" max="6" />
-          <span class="required">*</span><br />
+          <label>Jetpack:</label><br>
+          <input type="number" name="jetpack" required min="0" max="6">
+          <span class="required">*</span><br>
         </div>
         <div>
-          <label>Super Sneakers:</label><br />
-          <input type="number" name="superSneakers" required min="0" max="6" />
-          <span class="required">*</span><br />
+          <label>Super Sneakers:</label><br>
+          <input type="number" name="superSneakers" required min="0" max="6">
+          <span class="required">*</span><br>
         </div>
         <div>
-          <label>Magnet:</label><br />
-          <input type="number" name="magnet" required min="0" max="6" />
-          <span class="required">*</span><br />
+          <label>Magnet:</label><br>
+          <input type="number" name="magnet" required min="0" max="6">
+          <span class="required">*</span><br>
         </div>
         <div>
-          <label>Double Score:</label><br />
-          <input type="number" name="doubleScore" required min="0" max="6" />
-          <span class="required">*</span><br />
+          <label>Double Score:</label><br>
+          <input type="number" name="doubleScore" required min="0" max="6">
+          <span class="required">*</span><br>
         </div>
         <div>
           <label for="doubleCoins">Double Coins:</label>
           <label class="switch">
-            <input type="checkbox" id="doubleCoins" />
+            <input type="checkbox" id="doubleCoins">
             <span class="slider"></span>
           </label>
         </div>
@@ -52,7 +53,7 @@
             max="100"
             required
             disabled
-          />
+         >
           <span class="required">*</span>
         </div>
 
@@ -69,7 +70,7 @@
         <div>
           <label for="tokenBoost">Token Boost:</label>
           <label class="switch">
-            <input type="checkbox" id="tokenBoost" />
+            <input type="checkbox" id="tokenBoost">
             <span class="slider"></span>
           </label>
         </div>
@@ -84,7 +85,7 @@
             max="100"
             required
             disabled
-          />
+         >
           <span class="required">*</span>
         </div>
 
@@ -98,10 +99,9 @@
           });
         </script>
       </fieldset>
-      <br />
-      <input type="submit" class="btn btn-success" />
+      <input type="submit" class="btn btn-success">
     </form>
-
-    <?php require "../require/footer.php"; ?>
   </body>
+
+  <?php require "../require/footer.php"; ?>
 </html>

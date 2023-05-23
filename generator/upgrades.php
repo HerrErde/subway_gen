@@ -14,15 +14,17 @@ foreach ($required_params as $param) {
   if (($param === "doubleCoinsAmount" || $param === "tokenBoostAmount") && empty($_GET[$param])) {
     $_GET[$param] = 1;
   } elseif (empty($_GET[$param])) {
-    $errors[] = "Failed to generate. Try again.";
+    $errors[] = "Failed to generate. Please try again.";
   }
 }
 
 if (!empty($errors)) {
   $_SESSION["error"] = implode("<br>", $errors);
-  header("Location:../code/upgrades.php");
+  header("Location:
+  ../code/upgrades.php");
   exit();
-} ?>
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

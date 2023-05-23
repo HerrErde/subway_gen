@@ -10,6 +10,12 @@
   background: #555;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 * {
   text-align: center;
 }
@@ -24,8 +30,8 @@ header {
   color: #5865f2;
 }
 footer {
-  font-size: 15px;
-  display: contents;
+  font-size: 17px;
+  color: #aaa;
 }
 h2 {
   color: #5865f2;
@@ -59,6 +65,10 @@ textarea {
   background-color: #424242;
   font-size: 16px;
   resize: none;
+}
+
+input[type='submit'] {
+  margin-top: 23px;
 }
 
 input {

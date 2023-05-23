@@ -1,5 +1,5 @@
 <footer>
-  <p style="color: #aaa; font-size: 17px">
+  <p>
     <i class="fab fa-github"></i>
     <a
       href="https://github.com/HerrErde/subway_gen"
@@ -20,7 +20,7 @@
     // Output a link to the commit with the short hash
     echo "<a class='link' href='$commit_url' target='_blank'>$short_hash</a>";
     ?>
-  <hr />
+  <hr>
   <p style="font-size: 15px">
     ©
     <?php echo date("Y"); ?>
