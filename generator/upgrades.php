@@ -20,14 +20,16 @@ foreach ($required_params as $param) {
 
 if (!empty($errors)) {
   $_SESSION["error"] = implode("<br>", $errors);
-header("Location:../code/upgrades.php"); exit(); } ?>
+  header("Location:../code/upgrades.php");
+  exit();
+} ?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Code for the upgrades.json file</title>
     <?php require "../require/connect.php"; ?>
-    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/download.js"></script>
     <script>
       var filename = 'upgrades.json';
     </script>
@@ -46,8 +48,7 @@ header("Location:../code/upgrades.php"); exit(); } ?>
       </p>
     </header>
     <textarea name="textarea" rows="35" cols="35" readonly>
-<?php require "../code/upgrades.php"; ?></textarea
-    >
+    <?php require "../code/upgrades.php"; ?></textarea>
     <?php require "../require/down-copy.php"; ?>
     <?php require "../require/buttons.php"; ?>
     <?php require "../require/footer.php"; ?>

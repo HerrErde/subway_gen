@@ -17,7 +17,7 @@ foreach ($required_params as $param) {
   <head>
     <title>Code for the top_run.json file</title>
     <?php require "../require/connect.php"; ?>
-    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/download.js"></script>
     <script>
       var filename1 = 'toprun.json';
       var filename2 = 'user_stats.json';
@@ -45,9 +45,11 @@ foreach ($required_params as $param) {
   
   <form method="post">
   <div class="btn btn-success download" style="display: inline-block">
+    <i class="fa-solid fa-download"></i>
     <a onclick="download2Json('textarea1', 'toprun.json')">Top Run</a>
   </div>
   <div class="btn btn-success download" style="display: inline-block">
+  <i class="fa-solid fa-download"></i>
     <a onclick="download2Json('textarea2', 'user_stats.json')">User Stats</a>
   </div>
 </form>

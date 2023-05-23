@@ -24,7 +24,7 @@ foreach ($required_params as $param) {
   <head>
     <title>Code for the wallet.json file</title>
     <?php require "../require/connect.php"; ?>
-    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/download.js"></script>
     <script>var filename = 'wallet.json';</script>
   </head>
 

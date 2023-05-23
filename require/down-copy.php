@@ -8,6 +8,7 @@
     </i>
   </div>
   <div class="btn btn-success download" style="display: inline-block">
+    <i class="fa-solid fa-download"></i>
     <a onclick="downloadJson()">Download</a>
   </div>
 </form>
