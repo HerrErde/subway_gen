@@ -196,7 +196,7 @@ input[type='checkbox'].item {
 }
 
 .buttons {
-  padding-bottom: 40px;
+  padding-bottom: 5px;
 }
 .btn-upload-input {
   position: relative;

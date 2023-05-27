@@ -1,4 +1,15 @@
 <footer>
+<p>
+<?php
+// Calculate the page loading time in milliseconds
+$endTime = microtime(true);
+$pageLoadTime = ($endTime - $_SERVER["REQUEST_TIME_FLOAT"]) * 1000;
+
+// Display the page loading time
+echo "Page loaded in " . round($pageLoadTime, 2) . " ms";
+?>
+</P>
+
   <p>
     <i class="fab fa-github"></i>
     <a
