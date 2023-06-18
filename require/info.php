@@ -31,31 +31,32 @@
 
     $json = json_decode(file_get_contents($url), true);
     $api = json_decode(file_get_contents($playapi), true);
+
+    function displayValue($value)
+    {
+      return isset($value) ? $value : "Something is wrong...";
+    }
     ?>
 
     <div class="version-info">
       <div class="version-column">
         <div>
-          <span>Season:</span>
-          <span><?= $json["season"] ?></span>
-        </div>
-        <div>
           <span>Latest Version:</span>
-          <span>v<?= $json["version"] ?></span>
+          <span>v<?= displayValue($json["version"]) ?></span>
         </div>
         <div>
           <span>Next Release:</span>
-          <span id="release"></span>
+          <span id="release"><?= displayValue($json["release"]) ?></span>
         </div>
       </div>
       <div class="version-column">
         <div>
           <span>Latest App Version:</span>
-          <span><?= $api["version"] ?></span>
+          <span><?= displayValue($api["version"]) ?></span>
         </div>
         <div>
           <span>Supported App Version:</span>
-          <span><?= $json["appversion"] ?></span>
+          <span><?= displayValue($json["appversion"]) ?></span>
         </div>
       </div>
     </div>
