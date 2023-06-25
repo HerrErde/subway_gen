@@ -41,12 +41,16 @@
     <div class="version-info">
       <div class="version-column">
         <div>
+          <span>Season:</span>
+          <span><?= displayValue($json["season"]) ?></span>
+        </div>
+        <div>
           <span>Latest Version:</span>
           <span>v<?= displayValue($json["version"]) ?></span>
         </div>
         <div>
           <span>Next Release:</span>
-          <span id="release"><?= displayValue($json["release"]) ?></span>
+          <span id="release"></span>
         </div>
       </div>
       <div class="version-column">
