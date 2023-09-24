@@ -36,6 +36,6 @@ echo "Page loaded in " . round($pageLoadTime, 2) . " ms";
     ©
     <?php echo date("Y"); ?>
     <a class="rainbow" href="https://dev.herrerde.xyz" target='_blank'>HerrErde</a>, all rights
-    reserved
+    reserved. Idea credit by <a href="https://github.com/DevVali/subway_surf" target="_blank">DevVali</a>.
   </p>
 </footer>
