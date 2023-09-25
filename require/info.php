@@ -27,7 +27,7 @@
     <h2>Available generators</h2>
     <?php
     error_reporting(E_ERROR | E_PARSE);
-    $url = "https://raw.githubusercontent.com/HerrErde/SubwayBooster/masteer/src/version.json";
+    $url = "https://raw.githubusercontent.com/HerrErde/SubwayBooster/master/src/version.json";
     $playapi = "https://gplayapi.herrerde.xyz/api/apps/com.kiloo.subwaysurf";
 
     $json = json_decode(file_get_contents($url), true);
