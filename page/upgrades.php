@@ -99,7 +99,7 @@
           });
         </script>
       </fieldset>
-      <input type="submit" class="btn btn-success">
+      <input type="submit" class="btn btn-success" value="Submit">
     </form>
   </body>
 

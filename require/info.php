@@ -26,7 +26,7 @@
     </ol>
     <h2>Available generators</h2>
     <?php
-    $url = "https://raw.githubusercontent.com/HerrErde/SubwayBooster/main/Android/data/com.kiloo.subwaysurf/files/version.json";
+    $url = "https://raw.githubusercontent.com/HerrErde/SubwayBooster/masteer/src/version.json";
     $playapi = "https://gplayapi.herrerde.xyz/api/apps/com.kiloo.subwaysurf";
 
     $json = json_decode(file_get_contents($url), true);

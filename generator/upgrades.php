@@ -49,8 +49,7 @@ if (!empty($errors)) {
         own risk.
       </p>
     </header>
-    <textarea name="textarea" rows="35" cols="35" readonly>
-    <?php require "../code/upgrades.php"; ?></textarea>
+    <textarea name="textarea" rows="35" cols="35" readonly><?php require "../code/upgrades.php"; ?></textarea>
     <?php require "../require/down-copy.php"; ?>
     <?php require "../require/buttons.php"; ?>
     <?php require "../require/footer.php"; ?>

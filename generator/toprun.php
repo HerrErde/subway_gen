@@ -40,12 +40,8 @@ if (!empty($errors)) {
         own risk.
       </p>
     </header>
-    <textarea id="textarea1" rows="35" cols="35" readonly>
-      <?php require "../code/top_run.php"; ?>
-    </textarea>
-    <textarea id="textarea2" rows="35" cols="35" readonly>
-      <?php require "../code/user_stats.php"; ?>
-    </textarea>
+    <textarea id="textarea1" rows="35" cols="35" readonly><?php require "../code/top_run.php"; ?></textarea>
+    <textarea id="textarea2" rows="35" cols="35" readonly><?php require "../code/user_stats.php"; ?></textarea>
 
     <form method="post">
       <div class="btn btn-success download" style="display: inline-block">
