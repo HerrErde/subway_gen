@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 13px;
   background-color: #f5f5f5;
 }
 ::-webkit-scrollbar-track {
@@ -245,12 +245,18 @@ input[type='checkbox'].item {
   text-decoration: underline;
 }
 .btn-primary {
-  background-color: #5865f2;
+  background-color: #3c45a3;
 }
 .btn-primary:hover {
-  background-color: #4752c4;
+  background-color: #2e3194;
 }
-.btn-primary.disabled {
+.btn-secondary {
+  background-color: #5865f2;
+}
+.btn-secondary:hover {
+  background-color: #4c53a3;
+}
+.btn.disabled {
   background-color: #686d73;
   cursor: not-allowed;
 }

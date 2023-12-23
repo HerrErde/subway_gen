@@ -13,8 +13,7 @@
         <a
           href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf"
           style="color: lightgreen; text-decoration: underline"
-          >Subway Surfers</a
-        >.
+          >Subway Surfers</a>.
       </li>
       <li>Open your file manager app.</li>
       <li>Navigate between the folders.</li>

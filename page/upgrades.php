@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <title>Generate your Upgrades</title>
-    <?php require "../require/connect.php"; ?>
-    <?php require "../require/buttons.php"; ?>
+    <?php
+      $activePage = basename(__FILE__, '.php');
+      require "../require/connect.php";
+      require "../require/buttons.php";
+    ?>
   </head>
 
   <body>
@@ -52,8 +55,7 @@
             min="0"
             max="100"
             required
-            disabled
-         >
+            disabled>
           <span class="required">*</span>
         </div>
 
@@ -84,8 +86,7 @@
             min="0"
             max="100"
             required
-            disabled
-         >
+            disabled>
           <span class="required">*</span>
         </div>
 

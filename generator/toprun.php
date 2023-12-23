@@ -50,9 +50,8 @@ if (!empty($errors)) {
       </div>
       <div class="btn btn-success download" style="display: inline-block">
         <i class="fa-solid fa-download"></i>
-        <a onclick="download2Json('textarea2', 'user_stats.json')"
-          >User Stats</a
-        >
+        <a onclick="download2Json('textarea2', 'user_stats.json')">
+        User Stats</a>
       </div>
     </form>
 

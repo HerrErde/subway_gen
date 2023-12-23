@@ -12,7 +12,10 @@
       <img src="/assets/img/subwaysurf-matrix.png" />
     </header>
     <?php require "require/info.php"; ?>
-    <?php require "require/buttons.php"; ?>
+    <?php 
+      $activePage = basename(__FILE__, '.php');
+      require "require/buttons.php";
+    ?>
     <?php require "require/footer.php"; ?>
   </body>
 </html>
