@@ -4,10 +4,7 @@
 
 <script defer data-domain="subway.herrerde.xyz" src="https://a.herrerde.xyz/js/script.js"></script>
 
-<script
-  src="https://kit.fontawesome.com/ede9707ca2.js"
-  crossorigin="anonymous"
-></script>
+<script src="https://kit.fontawesome.com/ede9707ca2.js" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/switch.css">
