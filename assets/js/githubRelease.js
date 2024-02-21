@@ -54,7 +54,18 @@ async function updateRelease() {
   // Update the text content of an HTML element with id "release"
   const releaseElement = document.getElementById('release');
   releaseElement.textContent = `~${daysUntilNextRelease}d ${hoursUntilNextRelease}h ${minutesUntilNextRelease}m`;
+
+  // Set the title attribute to the release date
+  const nextReleaseDate = new Date(Date.now() + timeUntilNextRelease);
+  releaseElement.setAttribute('title', nextReleaseDate);
 }
 
 // Call the updateRelease function to initialize the time until the next release when the page loads
 updateRelease();
+
+// Add event listener for hover to set title attribute to the release date
+const dataContainer = document.getElementById('dataContainer');
+dataContainer.addEventListener('mouseover', function () {
+  const releaseDate = new Date(dataContainer.getAttribute('title'));
+  dataContainer.setAttribute('title', releaseDate.toDateString());
+});

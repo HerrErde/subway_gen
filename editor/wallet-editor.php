@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <?php
-$required_params = [
-  "hoverboards",
-  "gamekeys",
-  "gamecoins",
-  "scoreboosters",
-  "headstarts",
-  "eventcoins",
-];
+  $required_params = [
+    "gamecoins",
+    "gamekeys",
+    "hoverboards",
+    "headstarts",
+    "scoreboosters",
+    "eventcoins",
+  ];
 ?>
   <head>
     <title>Edit your wallet.json file</title>
