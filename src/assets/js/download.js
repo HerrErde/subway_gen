@@ -1,43 +1,17 @@
-function downloadJson() {
-  // Get the JSON data from the textarea
-  const data = document.querySelector('textarea').value;
-
-  // Create a new blob object containing the JSON data
-  const blob = new Blob([data], { type: 'application/json' });
-
-  // Create a URL for the blob object
-  const url = URL.createObjectURL(blob);
-
-  // Create a new anchor element with the download attribute
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-
-  // Append the anchor element to the document body
-  document.body.appendChild(a);
-
-  // Click the anchor element to trigger the download
-  a.click();
-
-  // Remove the anchor element from the document body
-  document.body.removeChild(a);
-
-  // Release the URL object to free up memory
-  URL.revokeObjectURL(url);
+function downloadJsonFromTextarea(textareaSelector, filename) {
+  const data = document.querySelector(textareaSelector).value;
+  downloadJsonData(data, filename);
 }
 
-// Function to download JSON data from a textarea
-function download2Json(textareaId, filename) {
-  // Get the JSON data from the textarea
-  const data = document.getElementById(textareaId).value;
-
-  // Create a new blob object containing the JSON data
+function downloadJsonData(data, filename) {
   const blob = new Blob([data], { type: 'application/json' });
 
   // Create a URL for the blob object
   const url = URL.createObjectURL(blob);
+  downloadFromUrl(url, filename);
+}
 
-  // Create a new anchor element with the download attribute
+function downloadFromUrl(url, filename) {
   const a = document.createElement('a');
   a.href = url;
   a.download = filename;
@@ -45,22 +19,22 @@ function download2Json(textareaId, filename) {
   // Append the anchor element to the document body
   document.body.appendChild(a);
 
-  // Click the anchor element to trigger the download
-  a.click();
+  // Trigger the download after a short delay to ensure the URL is fully created
+  setTimeout(() => {
+    // Click the anchor element to trigger the download
+    a.click();
 
-  // Remove the anchor element from the document body
-  document.body.removeChild(a);
+    // Remove the anchor element from the document body
+    document.body.removeChild(a);
 
-  // Release the URL object to free up memory
-  URL.revokeObjectURL(url);
+    // Release the URL object to free up memory
+    URL.revokeObjectURL(url);
+  }, 100);
 }
 
 // Copy to Clipboard
-function copyToClipboard() {
-  // Get the textarea element to copy from
-  const copyText = document.querySelector('textarea');
-
-  // Select the text in the textarea
+function copyToClipboard(textareaSelector) {
+  const copyText = document.querySelector(textareaSelector);
   copyText.select();
   copyText.setSelectionRange(0, 99999); // Set selection range to cover the entire text
 
