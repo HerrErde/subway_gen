@@ -13,8 +13,7 @@ foreach ($required_params as $param) {
 
 if (!empty($errors)) {
   $_SESSION["error"] = implode("<br>", $errors);
-  header("Location:
-  ../code/top_run.php");
+  header("Location: ../code/top_run.php");
   exit();
 }
 ?>

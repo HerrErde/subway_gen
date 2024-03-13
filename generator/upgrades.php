@@ -20,8 +20,7 @@ foreach ($required_params as $param) {
 
 if (!empty($errors)) {
   $_SESSION["error"] = implode("<br>", $errors);
-  header("Location:
-  ../code/upgrades.php");
+  header("Location: ../code/upgrades.php");
   exit();
 }
 ?>
