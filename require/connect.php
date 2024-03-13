@@ -8,4 +8,4 @@
 
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="stylesheet" href="/assets/css/switch.css">
-<link rel="shortcut icon" href="/assets/img/icon.png">
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
