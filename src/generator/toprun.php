@@ -23,7 +23,10 @@ if (!empty($errors)) {
 
 <head>
   <title>Code for the top_run.json file</title>
-  <?php require "../require/connect.php"; ?>
+  <?php
+  $activePage = basename(__FILE__, '.php');
+  require "../require/connect.php";
+  ?>
   <script src="../assets/js/download.js"></script>
 </head>
 

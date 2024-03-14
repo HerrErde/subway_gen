@@ -30,7 +30,10 @@ if (!empty($errors)) {
 
 <head>
   <title>Code for the wallet.json file</title>
-  <?php require "../require/connect.php"; ?>
+  <?php
+  $activePage = basename(__FILE__, '.php');
+  require "../require/connect.php";
+  ?>
   <script src="../assets/js/download.js"></script>
   <script>
     var filename = 'wallet.json';

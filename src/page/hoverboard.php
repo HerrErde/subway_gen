@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Generate your Characters</title>
+  <title>Generate your Boards</title>
   <?php
   $activePage = basename(__FILE__, '.php');
   require "../require/connect.php";
@@ -29,7 +29,7 @@
   <form id="form">
     <fieldset>
       <?php
-      $json_data = file_get_contents("https://github.com/HerrErde/subway-source/releases/latest/download/characters_links.json");
+      $json_data = file_get_contents("https://github.com/HerrErde/subway-source/releases/latest/download/boards_links.json");
       $items = json_decode($json_data);
 
       // Add a counter to track default checkboxes
@@ -82,14 +82,13 @@
 
       // Include selected default ID in URL
       var url =
-        '../generator/character.php?select=' +
+        '../generator/hoverboard.php?select=' +
         defaultId +
         '&items=' +
         JSON.stringify(ids);
       window.location.href = url;
     }
   </script>
-
 
   <?php require "../require/footer.php"; ?>
 
