@@ -75,7 +75,7 @@ foreach ($items as $item) {
 // Construct the main JSON object
 $mainJsonObject = [
     "version" => 3,
-    "data" => "{\"selected\":\"$selectedItemId\",\"owned\":" . json_encode($datalist, JSON_UNESCAPED_UNICODE) . "}"
+    "data" => "{\"selected\":\"$selectedItemId\",\"owned\":" . json_encode($datalist) . "}",
 ];
 
 // Convert the main JSON object to a string and remove spaces
@@ -112,7 +112,7 @@ $textareaContent = json_encode($mainJsonObject);
         </p>
     </header>
 
-    <textarea name="textarea" rows="35" cols="100" readonly><?= $textareaContent ?></textarea>
+    <textarea name="textarea" rows="35" cols="60" readonly><?= $textareaContent ?></textarea>
 
     <?php
     $activePage = basename(__FILE__, '.php');

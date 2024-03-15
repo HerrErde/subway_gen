@@ -52,33 +52,31 @@ foreach ($items as $item) {
     $item = getItemId($item, $item_data);
     if ($item !== null) {
         // Create the datalist object for the current item
-        $ownedUpgrades = [];
+        $ownedOutfits = [];
         if ($item['outfits'] !== null) {
             // If upgrades exist, include all upgrades with "value" set to true
             foreach ($item['outfits'] as $upgrade) {
-                $ownedUpgrades[] = ["value" => $upgrade['id']];
+                $ownedOutfits[] = ["value" => $upgrade['id']];
             }
         } else {
             // If upgrades are null, include only the "default" upgrade
-            $ownedUpgrades[] = ["value" => "default"];
+            $ownedOutfits[] = ["value" => "default"];
         }
 
-        $datalist[$bitemoard['id']] = [
+        $datalist[$item['id']] = [
             "value" => [
                 "id" => $item['id'],
-                "ownedOutfits" => $ownedUpgrades
-            ]
+                "ownedOutfits" => $ownedOutfits,
+            ],
         ];
     }
 }
 
-
 // Construct the main JSON object
 $mainJsonObject = [
     "version" => 3,
-    "data" => "{\"selected\":{\"character\":\"$selectedItemId\",\"outfit\":\"default\"},\"owned\":" . json_encode($datalist, JSON_UNESCAPED_UNICODE) . "}"
+    "data" => "{\"selected\":{\"character\":\"$selectedItemId\",\"outfit\":\"default\"},\"owned\":" . json_encode($datalist) . "}",
 ];
-
 
 // Convert the main JSON object to a string and remove spaces
 $textareaContent = json_encode($mainJsonObject);
@@ -88,14 +86,14 @@ $textareaContent = json_encode($mainJsonObject);
 <html lang="en">
 
 <head>
-    <title>Code for the character_inventory.json file</title>
+    <title>Code for the characters_inventory.json file</title>
     <?php
     $activePage = basename(__FILE__, '.php');
     require "../require/connect.php";
     ?>
     <script src="../assets/js/download.js"></script>
     <script>
-        var filename = 'character_inventory.json';
+        var filename = 'characters_inventory.json';
     </script>
     <?= $logScript ?> <!-- Include the JavaScript for logging -->
 </head>
@@ -104,7 +102,7 @@ $textareaContent = json_encode($mainJsonObject);
     <header>
         <h1>Code for your Character Inventory</h1>
         <p id="title">
-            Download or copy the generated code, find the file character_inventory.json in the
+            Download or copy the generated code, find the file characters_inventory.json in the
             folder "profile" and paste it there.
         </p>
         <p id="warning">
@@ -113,7 +111,7 @@ $textareaContent = json_encode($mainJsonObject);
         </p>
     </header>
 
-    <textarea name="textarea" rows="35" cols="100" readonly><?= $textareaContent ?></textarea>
+    <textarea name="textarea" rows="35" cols="60" readonly><?= $textareaContent ?></textarea>
 
     <?php
     $activePage = basename(__FILE__, '.php');
