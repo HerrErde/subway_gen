@@ -56,40 +56,13 @@
       ?>
     </fieldset>
     <div id="filteredItems"></div>
-    <input type="button" class="btn btn-success" value="Generate URL" onclick="generateUrl()">
+    <input type="button" class="btn btn-success" value="Generate URL" onclick="generateUrlFunction()">
   </form>
 
   <script src="../assets/js/search.js"></script>
   <script src="../assets/js/generate.js"></script>
 
-  <script>
-    // JavaScript function to generate URL with selected IDs and default selection
-    function generateUrl() {
-      var checkboxes = document.querySelectorAll('.select-checkbox:checked');
-      var defaultCheckbox = document.querySelector(
-        '.default-select-checkbox:checked'
-      );
-
-      var ids = [];
-      checkboxes.forEach(function (checkbox) {
-        ids.push(parseInt(checkbox.value)); // Parse value as integer
-      });
-
-      var defaultId = 1;
-      if (defaultCheckbox) {
-        defaultId = parseInt(defaultCheckbox.value);
-      }
-
-      // Include selected default ID in URL
-      var url =
-        '../generator/character.php?select=' +
-        defaultId +
-        '&items=' +
-        JSON.stringify(ids);
-      window.location.href = url;
-    }
-  </script>
-
+  <script src="../assets/js/generateUrl.js" url="../generator/character.php?select="></script>
 
   <?php require "../require/footer.php"; ?>
 

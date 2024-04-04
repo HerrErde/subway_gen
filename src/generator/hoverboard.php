@@ -1,4 +1,21 @@
 <?php
+// Function to decompress the compressed data
+function decompress($compressed)
+{
+    $decompressed = [];
+
+    foreach ($compressed as $item) {
+        if (strpos($item, '-') !== false) {
+            list($start, $end) = array_map('intval', explode('-', $item));
+            $decompressed = array_merge($decompressed, range($start, $end));
+        } else {
+            $decompressed[] = intval($item);
+        }
+    }
+
+    return $decompressed;
+}
+
 // Function to get the ID from the json file based on item number
 function getItemId($itemNumber, $jsonArray)
 {
@@ -17,7 +34,10 @@ $item_data = json_decode($json_data, true);
 
 // Extract the "select" number and the items from the URL parameters
 $selectNumber = isset($_GET['select']) ? $_GET['select'] : null;
-$items = isset($_GET['items']) ? json_decode($_GET['items']) : [];
+$compressedItems = isset($_GET['items']) ? json_decode($_GET['items']) : [];
+
+// Decompress the items
+$items = decompress($compressedItems);
 
 // Initialize an array to store the IDs
 $itemIds = [];
