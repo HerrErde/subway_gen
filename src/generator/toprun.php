@@ -1,21 +1,8 @@
 <?php
 $required_params = ["highscore", "userstatsAmount"];
 
-$errors = [];
+require "../require/error.php";
 
-foreach ($required_params as $param) {
-  if (($param === "userstatsAmount") && empty($_GET[$param])) {
-    $_GET[$param] = 2147483647;
-  } elseif (!isset($_GET[$param])) {
-    $errors[] = "Failed to generate. Please try again.";
-  }
-}
-
-if (!empty($errors)) {
-  $_SESSION["error"] = implode("<br>", $errors);
-  header("Location: ../code/top_run.php");
-  exit();
-}
 ?>
 
 <!DOCTYPE html>
@@ -57,8 +44,10 @@ if (!empty($errors)) {
     </div>
   </form>
 
-  <?php require "../require/buttons.php"; ?>
-  <?php require "../require/footer.php"; ?>
+  <?php
+  require "../require/buttons.php";
+  require "../require/footer.php";
+  ?>
 </body>
 
 </html>

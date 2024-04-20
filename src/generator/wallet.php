@@ -8,21 +8,8 @@ $required_params = [
   "eventcoins",
 ];
 
-$errors = [];
+require "../require/error.php";
 
-foreach ($required_params as $param) {
-  if (!isset($_GET[$param])) {
-    $_GET[$param] = 1;
-  } elseif (empty($_GET[$param])) {
-    $errors[] = "Failed to generate. Please try again.";
-  }
-}
-
-if (!empty($errors)) {
-  $_SESSION["error"] = implode("<br>", $errors);
-  header("Location: ../code/upgrades.php");
-  exit();
-}
 ?>
 
 <!DOCTYPE html>
@@ -53,9 +40,11 @@ if (!empty($errors)) {
     </p>
   </header>
   <textarea name="textarea" rows="35" cols="35" readonly><?php require "../code/wallet.php"; ?></textarea>
-  <?php require "../require/down-copy.php"; ?>
-  <?php require "../require/buttons.php"; ?>
-  <?php require "../require/footer.php"; ?>
+  <?php
+  require "../require/down-copy.php";
+  require "../require/buttons.php";
+  require "../require/footer.php";
+  ?>
 </body>
 
 </html>

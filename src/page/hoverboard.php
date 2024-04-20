@@ -60,7 +60,7 @@
   </form>
 
   <script src="../assets/js/search.js"></script>
-  <script src="../assets/js/generate.js"></script>
+  <script src="../assets/js/selall.js"></script>
 
   <script src="../assets/js/generateUrl.js" url="../generator/hoverboard.php?select="></script>
 

@@ -1,4 +1,13 @@
 <?php
+$errors = [];
+
+if (!empty($errors)) {
+    $_SESSION["error"] = implode("<br>", $errors);
+    header("Location: ../page/error.php");
+    exit();
+}
+
+
 // Function to decompress the compressed data
 function decompress($compressed)
 {
@@ -135,7 +144,6 @@ $textareaContent = json_encode($mainJsonObject);
     <textarea name="textarea" rows="35" cols="60" readonly><?= $textareaContent ?></textarea>
 
     <?php
-    $activePage = basename(__FILE__, '.php');
     require "../require/down-copy.php";
     require "../require/buttons.php";
     require "../require/footer.php";
