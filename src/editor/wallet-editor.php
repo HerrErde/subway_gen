@@ -45,8 +45,9 @@ $required_params = [
           <label>
             <?php echo ucfirst($param); ?>:
           </label><br />
-          <input type="number" name="<?php echo $param; ?>" id="<?php echo $param; ?>" required min="0"
-            max="2147483647" />
+          <input type="number" name="<?php echo $param; ?>" id="<?php echo $param; ?>" max="2147483647" name="eventcoins"
+            type="number" min="1" max="2147483647" step="1"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
           <span class="required">*</span><br>
         <?php endforeach; ?>
         <input type="submit" class="btn btn-success" />

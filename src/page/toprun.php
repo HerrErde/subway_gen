@@ -22,7 +22,8 @@
         <legend>Game data</legend>
         <div>
           <label>Highscore:</label><br>
-          <input type="number" name="highscore" required min="0" max="9223372036854775807">
+          <input type="number" name="highscore" type="number" min="0" max="9223372036854775807" step="1"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
           <span class="required">*</span><br>
         </div>
         <div>
@@ -35,7 +36,8 @@
 
         <div>
           <label for="userstatsAmount">Stats Score Amount:</label>
-          <input type="number" name="userstatsAmount" id="userstatsAmount" min="0" max="2147483647" required disabled>
+          <input type="number" name="userstatsAmount" id="userstatsAmount" type="number" min="0" max="2147483647"
+            step="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required disabled>
           <span class="required">*</span>
         </div>
       </div>

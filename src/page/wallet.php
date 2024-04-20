@@ -23,22 +23,28 @@
       <div>
         <legend>Game data</legend>
         <label>Hoverboards:</label><br>
-        <input type="number" name="hoverboards" required min="0" max="2147483647">
+        <input name="hoverboards" type="number" min="1" max="2147483647" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
         <label>Game keys:</label><br>
-        <input type="number" name="gamekeys" required min="0" max="2147483647">
+        <input type="number" name="gamekeys" type="number" min="1" max="2147483647" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
         <label>Game coins:</label><br>
-        <input type="number" name="gamecoins" required min="0" max="2147483647">
+        <input type="number" name="gamecoins" type="number" min="1" max="2147483647" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
         <label>Score Boosters:</label><br>
-        <input type="number" name="scoreboosters" required min="0" max="2147483647">
+        <input type="number" name="scoreboosters" type="number" min="1" max="2147483647" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
         <label>Headstarts:</label><br>
-        <input type="number" name="headstarts" required min="0" max="2147483647">
+        <input type="number" name="headstarts" type="number" min="1" max="2147483647" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
         <label>Eventcoins:</label><br>
-        <input type="number" name="eventcoins" required min="0" max="2147483647">
+        <input type="number" name="eventcoins" type="number" min="1" max="2147483647" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
       </div>
     </fieldset>

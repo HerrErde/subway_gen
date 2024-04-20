@@ -22,22 +22,26 @@
       <div>
         <legend>Game data</legend>
         <label>Jetpack:</label><br>
-        <input type="number" name="jetpack" required min="0" max="6">
+        <input type="number" name="jetpack" type="number" min="1" max="6" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
       </div>
       <div>
         <label>Super Sneakers:</label><br>
-        <input type="number" name="superSneakers" required min="0" max="6">
+        <input type="number" name="superSneakers" type="number" min="1" max="6" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
       </div>
       <div>
         <label>Magnet:</label><br>
-        <input type="number" name="magnet" required min="0" max="6">
+        <input type="number" name="magnet" type="number" min="1" max="6" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
       </div>
       <div>
         <label>Double Score:</label><br>
-        <input type="number" name="doubleScore" required min="0" max="6">
+        <input type="number" name="doubleScore" type="number" min="1" max="6" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
       </div>
       <div>
@@ -49,7 +53,8 @@
       </div>
       <div>
         <label for="doubleCoinsAmount">Double Coins Amount:</label>
-        <input type="number" name="doubleCoinsAmount" id="doubleCoinsAmount" min="0" max="100" required disabled>
+        <input type="number" name="doubleCoinsAmount" id="doubleCoinsAmount" type="number" min="0" max="100" step="1"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required disabled>
         <span class="required">*</span>
       </div>
 
