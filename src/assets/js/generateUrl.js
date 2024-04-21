@@ -13,12 +13,9 @@ function compress(numbers) {
       end += 1;
     } else {
       if (start === end) {
-        compressed.push(start.toString());
-      } else if (start === end - 1) {
-        compressed.push(start.toString());
-        compressed.push(end.toString());
+        compressed.push(start);
       } else {
-        compressed.push(`${start}-${end}`);
+        compressed.push([start, end]);
       }
       start = end = num;
     }
@@ -26,12 +23,9 @@ function compress(numbers) {
 
   // Append the last range or single number
   if (start === end) {
-    compressed.push(start.toString());
-  } else if (start === end - 1) {
-    compressed.push(start.toString());
-    compressed.push(end.toString());
+    compressed.push(start);
   } else {
-    compressed.push(`${start}-${end}`);
+    compressed.push([start, end]);
   }
 
   return compressed;
@@ -44,6 +38,13 @@ function generateUrl(url) {
     '.default-select-checkbox:checked'
   );
 
+  if (!checkboxes || checkboxes.length === 0) {
+    // Handle the case where no checkboxes are checked
+    console.error('No checkboxes are checked.');
+    alert('You did not select any checkboxes.');
+    return;
+  }
+
   const ids = [];
   checkboxes.forEach(function (checkbox) {
     ids.push(parseInt(checkbox.value)); // Parse value as integer
@@ -54,9 +55,24 @@ function generateUrl(url) {
   // Compress the IDs for URL
   const compressedIds = compress(ids);
 
-  // Include selected default ID and compressed IDs in URL
-  const generatedUrl =
-    url + defaultId + '&items=' + JSON.stringify(compressedIds);
+  // Construct the items part of the URL
+  let itemsStr = '[';
+  for (let i = 0; i < compressedIds.length; i++) {
+    if (Array.isArray(compressedIds[i])) {
+      // Range format [start, end]
+      itemsStr += `${compressedIds[i][0]}-${compressedIds[i][1]}`;
+    } else {
+      // Single number
+      itemsStr += compressedIds[i];
+    }
+    if (i < compressedIds.length - 1) {
+      itemsStr += ',';
+    }
+  }
+  itemsStr += ']';
+
+  // Construct the final URL
+  const generatedUrl = `${url}?select=${defaultId}&items=${itemsStr}`;
   window.location.href = generatedUrl;
 }
 

@@ -37,23 +37,31 @@ function getItemId($itemNumber, $jsonArray)
 }
 
 // Fetch and decode the json file
-$json_url = 'https://github.com/HerrErde/subway-source/releases/latest/download/characters_data.json ';
+$json_url = 'https://github.com/HerrErde/subway-source/releases/latest/download/characters_data.json';
 $json_data = file_get_contents($json_url);
 $item_data = json_decode($json_data, true);
 
 // Extract the "select" number and the items from the URL parameters
 $selectNumber = isset($_GET['select']) ? $_GET['select'] : null;
-$compressedItems = isset($_GET['items']) ? json_decode($_GET['items']) : [];
+
+// Parse the items parameter directly from the URL
+$itemsParam = isset($_GET['items']) ? $_GET['items'] : '';
+$items = [];
+
+// Extract items from the URL parameter
+if (preg_match_all('/(\d+-\d+|\d+)/', $itemsParam, $matches)) {
+    $items = $matches[0];
+}
 
 // Decompress the items
-$items = decompress($compressedItems);
+$decompressedItems = decompress($items);
 
 // Initialize an array to store the IDs
 $itemIds = [];
 
 // JavaScript for logging picked items
 $logScript = '<script>';
-foreach ($items as $item) {
+foreach ($decompressedItems as $item) {
     $item = getItemId($item, $item_data);
     if ($item !== null) {
         $itemIds[] = $item['id'];
@@ -77,7 +85,7 @@ $logScript .= '</script>';
 $datalist = [];
 
 // Generate datalist objects for each selected item
-foreach ($items as $item) {
+foreach ($decompressedItems as $item) {
     $item = getItemId($item, $item_data);
     if ($item !== null) {
         // Create the datalist object for the current item
