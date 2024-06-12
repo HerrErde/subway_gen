@@ -14,8 +14,11 @@ $required_params = [
 
 <head>
   <title>Edit your wallet.json file</title>
-  <?php require "../require/connect.php"; ?>
-  <?php require "../require/buttons.php"; ?>
+  <?php
+  $activePage = basename(__FILE__, '.php');
+  require "../require/connect.php";
+  require "../require/buttons.php";
+  ?>
 </head>
 
 <body>
