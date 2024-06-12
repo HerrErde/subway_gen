@@ -235,14 +235,8 @@ input[type='checkbox'].item {
   text-decoration: none;
   transition-duration: 0.2s;
 }
-.btn:hover:not(
-    .btn-primary,
-    .btn-secondary,
-    .btn-success,
-    .btn-danger,
-    .btn-extra
-  ) {
-  text-decoration: underline;
+.btn:hover:not() {
+  text-decoration: none;
 }
 .btn-primary {
   background-color: #3c45a3;
@@ -265,6 +259,12 @@ input[type='checkbox'].item {
 }
 .btn-success:hover {
   background-color: #215b32;
+}
+.btn-tertiary {
+  background-color: #17c0a9;
+}
+.btn-tertiary:hover {
+  background-color: #118d7d;
 }
 .btn-danger {
   background-color: #d83c3e;
