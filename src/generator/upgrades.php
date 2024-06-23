@@ -5,9 +5,24 @@ $required_params = [
   "magnet",
   "doubleScore",
   "doubleCoinsAmount",
-  "tokenBoostAmount"
+  "doubleCoinsTime",
+  "tokenBoostAmount",
+  "tokenBoostTime"
 ];
 
+
+foreach ($required_params as $param) {
+  if (($param === "doubleCoinsAmount" || $param === "tokenBoostAmount") && empty($_GET[$param])) {
+    $_GET[$param] = 1;
+  } elseif (empty($_GET[$param])) {
+    $errors[] = "Failed to generate. Please try again.";
+  }
+  if (($param === "doubleCoinsTime" || $param === "tokenBoostTime") && empty($_GET[$param])) {
+    $_GET[$param] = 999999999999999;
+  } elseif (empty($_GET[$param])) {
+    $errors[] = "Failed to generate. Please try again.";
+  }
+}
 $errors = [];
 
 if (!empty($errors)) {

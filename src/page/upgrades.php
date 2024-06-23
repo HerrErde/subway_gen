@@ -58,6 +58,12 @@
         <span class="required">*</span>
       </div>
 
+      <div>
+        <label for="doubleCoinsTime">Double Coins Time:</label>
+        <input type="number" id="doubleCoinsTime" min="1719167575" max="999999999999999"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required disabled>
+        <span class="required">*</span>
+      </div>
 
       <div>
         <label for="tokenBoost">Token Boost:</label>
@@ -72,7 +78,11 @@
           onkeypress='return event.charCode >= 48 && event.charCode <= 57' required disabled>
         <span class="required">*</span>
       </div>
-      <span class="required">*</span>
+      <div>
+        <label for="tokenBoostTime">Token Boost Time:</label>
+        <input type="number" name="tokenBoostTime" id="tokenBoostTime" min="1719167575" max="999999999999999"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required disabled>
+        <span class="required">*</span>
       </div>
     </fieldset>
     <input type="submit" class="btn btn-success" value="Submit">
