@@ -78,6 +78,7 @@ textarea {
   background-color: #424242;
   font-size: 16px;
   resize: none;
+  max-width: 30%;
 }
 
 input[type='submit'] {
@@ -307,7 +308,6 @@ input[type='checkbox'].item {
   .btn {
     margin: 1px;
   }
-  /* Style for the item container */
   .item {
     display: inline-block;
     border: 1px solid #ccc;
@@ -316,15 +316,27 @@ input[type='checkbox'].item {
     text-align: center;
   }
 
-  /* Style for the item image */
   .item img {
     height: 120px;
     max-width: 110px;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
 
-  /* Style for the item label */
   .item label {
     font-weight: bold;
+  }
+
+  textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid #8b8b8b;
+    border-radius: 5px;
+    background-color: #424242;
+    font-size: 16px;
+    resize: none;
+    width: 100%;
+    max-width: 100%;
   }
 }

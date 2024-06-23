@@ -8,7 +8,13 @@ $required_params = [
   "tokenBoostAmount"
 ];
 
-require "../require/error.php";
+$errors = [];
+
+if (!empty($errors)) {
+  $_SESSION["error"] = implode("<br>", $errors);
+  header("Location: ../page/error.php");
+  exit();
+}
 
 ?>
 

@@ -22,25 +22,25 @@
       <div>
         <legend>Game data</legend>
         <label>Jetpack:</label><br>
-        <input type="number" name="jetpack" type="number" min="1" max="6" step="1"
+        <input type="number" name="jetpack" min="1" max="6" step="1"
           onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
       </div>
       <div>
         <label>Super Sneakers:</label><br>
-        <input type="number" name="superSneakers" type="number" min="1" max="6" step="1"
+        <input type="number" name="superSneakers" min="1" max="6" step="1"
           onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
       </div>
       <div>
         <label>Magnet:</label><br>
-        <input type="number" name="magnet" type="number" min="1" max="6" step="1"
+        <input type="number" name="magnet" min="1" max="6" step="1"
           onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
       </div>
       <div>
         <label>Double Score:</label><br>
-        <input type="number" name="doubleScore" type="number" min="1" max="6" step="1"
+        <input type="number" name="doubleScore" min="1" max="6" step="1"
           onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
         <span class="required">*</span><br>
       </div>
@@ -53,20 +53,11 @@
       </div>
       <div>
         <label for="doubleCoinsAmount">Double Coins Amount:</label>
-        <input type="number" name="doubleCoinsAmount" id="doubleCoinsAmount" type="number" min="0" max="100" step="1"
+        <input type="number" name="doubleCoinsAmount" id="doubleCoinsAmount" min="0" max="100" step="1"
           onkeypress='return event.charCode >= 48 && event.charCode <= 57' required disabled>
         <span class="required">*</span>
       </div>
 
-      <script>
-        const doubleCoins = document.getElementById('doubleCoins');
-        const doubleCoinsAmount =
-          document.getElementsByName('doubleCoinsAmount')[0];
-
-        doubleCoins.addEventListener('change', () => {
-          doubleCoinsAmount.disabled = !doubleCoins.checked;
-        });
-      </script>
 
       <div>
         <label for="tokenBoost">Token Boost:</label>
@@ -75,25 +66,36 @@
           <span class="slider"></span>
         </label>
       </div>
-
       <div>
         <label for="tokenBoostAmount">Token Boost Amount:</label>
-        <input type="number" name="tokenBoostAmount" id="tokenBoostAmount" min="0" max="100" required disabled>
+        <input type="number" name="tokenBoostAmount" id="tokenBoostAmount" min="0" max="100"
+          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required disabled>
         <span class="required">*</span>
       </div>
-
-      <script>
-        const tokenBoost = document.getElementById('tokenBoost');
-        const tokenBoostAmount =
-          document.getElementsByName('tokenBoostAmount')[0];
-
-        tokenBoost.addEventListener('change', () => {
-          tokenBoostAmount.disabled = !tokenBoost.checked;
-        });
-      </script>
+      <span class="required">*</span>
+      </div>
     </fieldset>
     <input type="submit" class="btn btn-success" value="Submit">
   </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleFields = (checkboxId, ...fieldIds) => {
+        const checkbox = document.getElementById(checkboxId);
+        const fields = fieldIds.map(id => document.getElementById(id));
+
+        checkbox.addEventListener('change', () => {
+          fields.forEach(field => {
+            field.disabled = !checkbox.checked;
+          });
+        });
+      };
+
+      toggleFields('doubleCoins', 'doubleCoinsAmount', 'doubleCoinsTime');
+      toggleFields('tokenBoost', 'tokenBoostAmount', 'tokenBoostTime');
+    });
+
+  </script>
 </body>
 
 <?php require "../require/footer.php"; ?>
