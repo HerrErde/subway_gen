@@ -19,7 +19,7 @@
   <form method="get" action="../generator/toprun.php">
     <fieldset>
       <div>
-        <legend>Game data</legend>
+        <legend class="gamedata-title">Game data</legend>
         <div>
           <label>Highscore:</label><br>
           <input type="number" name="highscore" type="number" min="0" max="9223372036854775807" step="1"

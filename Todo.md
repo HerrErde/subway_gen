@@ -1,4 +1,6 @@
 - [x] Double Coins chooser
-- [ ] Character & Board chooser
+- [x] Character & Board chooser
 - [x] **Full** Top Run Highscore editor
 - [ ] Old files Editor (before the encryption)
+- [x] Profile Badges Generator
+- [ ] Profile Frames & Portraits

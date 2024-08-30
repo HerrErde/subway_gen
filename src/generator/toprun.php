@@ -20,7 +20,7 @@ if (!empty($errors)) {
   $activePage = basename(__FILE__, '.php');
   require "../require/connect.php";
   ?>
-  <script src="../assets/js/download.js"></script>
+  <script src="/assets/js/download.js"></script>
 </head>
 
 <body>

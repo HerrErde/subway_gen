@@ -43,7 +43,7 @@ $required_params = [
     </div>
     <div style="flex: 1; justify-content: flex-end;">
       <form id="fileData" method="get" action="../generator/wallet.php">
-        <legend>Game data</legend>
+        <legend class="gamedata-title">Game data</legend>
         <?php foreach ($required_params as $param): ?>
           <label>
             <?php echo ucfirst($param); ?>:

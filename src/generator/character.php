@@ -128,7 +128,7 @@ $textareaContent = json_encode($mainJsonObject);
     $activePage = basename(__FILE__, '.php');
     require "../require/connect.php";
     ?>
-    <script src="../assets/js/download.js"></script>
+    <script src="/assets/js/download.js"></script>
     <script>
         var filename = 'characters_inventory.json';
     </script>

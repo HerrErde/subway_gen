@@ -1,11 +1,10 @@
 <?php
 $required_params = [
-  "hoverboards",
-  "gamekeys",
-  "gamecoins",
-  "scoreboosters",
-  "headstarts",
-  "eventcoins",
+  "bronze",
+  "silver",
+  "gold",
+  "diamond",
+  "champ",
 ];
 
 $errors = [];
@@ -22,22 +21,22 @@ if (!empty($errors)) {
 <html lang="en">
 
 <head>
-  <title>Code for the wallet.json file</title>
+  <title>Code for the user_stats.json file</title>
   <?php
   $activePage = basename(__FILE__, '.php');
   require "../require/connect.php";
   ?>
   <script src="/assets/js/download.js"></script>
   <script>
-    var filename = 'wallet.json';
+    var filename = 'user_stats.json';
   </script>
 </head>
 
 <body>
   <header>
-    <h1>Code for your Wallet</h1>
+    <h1>Code for your Profile</h1>
     <p id="title">
-      Download or copy the generated code, find the file wallet.json in the
+      Download or copy the generated code, find the file user_stats.json in the
       folder "profile" and paste it there.
     </p>
     <p id="warning">
@@ -45,7 +44,7 @@ if (!empty($errors)) {
       own risk.
     </p>
   </header>
-  <textarea name="textarea" rows="35" cols="35" readonly><?php require "../code/wallet.php"; ?></textarea>
+  <textarea name="textarea" rows="35" cols="35" readonly><?php require "../code/badges.php"; ?></textarea>
   <?php
   require "../require/down-copy.php";
   require "../require/buttons.php";

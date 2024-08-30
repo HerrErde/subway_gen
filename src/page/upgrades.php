@@ -20,7 +20,7 @@
   <form method="get" action="../generator/upgrades.php">
     <fieldset>
       <div>
-        <legend>Game data</legend>
+        <legend class="gamedata-title">Game data</legend>
         <label>Jetpack:</label><br>
         <input type="number" name="jetpack" min="1" max="6" step="1"
           onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>

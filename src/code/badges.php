@@ -1,0 +1,1 @@
+{"version":2,"data":{\"lastSaved\":\"\",\"lastIAPDate\":\"\",\"highScoreCollection\":{\"default\":2147383647},\"userStatCollection\":{\"102\":<?php echo$_GET["champ"];?>,\"103\":<?php echo$_GET["diamond"];?>,\"104\":<?php echo$_GET["gold"];?>,\"105\":<?php echo$_GET["silver"];?>,\"106:<?php echo$_GET["bronze"];?>}}}

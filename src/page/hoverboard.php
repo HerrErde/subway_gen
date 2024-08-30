@@ -59,10 +59,10 @@
     <input type="button" class="btn btn-success" value="Generate URL" onclick="generateUrlFunction()">
   </form>
 
-  <script src="../assets/js/search.js"></script>
-  <script src="../assets/js/selall.js"></script>
+  <script src="/assets/js/search.js"></script>
+  <script src="/assets/js/selall.js"></script>
 
-  <script src="../assets/js/generateUrl.js" url="../generator/hoverboard.php"></script>
+  <script src="/assets/js/generateUrl.js" url="../generator/hoverboard.php"></script>
 
   <?php require "../require/footer.php"; ?>
 

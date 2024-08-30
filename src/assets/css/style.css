@@ -104,6 +104,16 @@ input[type='checkbox'].item {
   background-color: #ccc;
 }
 
+.input-image img.input-icon {
+  width: 2%;
+  height: 2%;
+  transform: translateY(-50%);
+}
+
+.gamedata-title {
+  padding-bottom: 10px;
+}
+
 .required {
   color: red;
 }
@@ -338,5 +348,11 @@ input[type='checkbox'].item {
     resize: none;
     width: 100%;
     max-width: 100%;
+  }
+
+  .input-image img.input-icon {
+    width: 7%;
+    height: 7%;
+    margin-right: 5px;
   }
 }
