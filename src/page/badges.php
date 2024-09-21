@@ -25,53 +25,53 @@
         <legend class="gamedata-title">Game data</legend>
 
         <div class="input-group">
-          <label for="bronze">Bronze:</label><br>
+          <label for="bronze">Bronze:</label>
+          <span class="required">*</span><br>
           <div class="input-image">
             <img src="/assets/img/badges/bronze.png" alt="Bronze Icon" class="input-icon">
             <input id="bronze" name="bronze" type="number" min="1" max="2147483647" step="1"
               onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
           </div>
-          <span class="required">*</span><br>
         </div>
 
         <div class="input-group">
-          <label for="silver">Silver:</label><br>
+          <label for="silver">Silver:</label>
+          <span class="required">*</span><br>
           <div class="input-image">
             <img src="/assets/img/badges/silver.png" alt="Bronze Icon" class="input-icon">
             <input id="silver" name="silver" type="number" min="1" max="2147483647" step="1"
               onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
           </div>
-          <span class="required">*</span><br>
         </div>
 
         <div class="input-group">
-          <label for="gold">Gold:</label><br>
+          <label for="gold">Gold:</label>
+          <span class="required">*</span><br>
           <div class="input-image">
             <img src="/assets/img/badges/gold.png" alt="Bronze Icon" class="input-icon">
             <input id="gold" name="gold" type="number" min="1" max="2147483647" step="1"
               onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
           </div>
-          <span class="required">*</span><br>
         </div>
 
         <div class="input-group">
-          <label for="diamond">Diamond:</label><br>
+          <label for="diamond">Diamond:</label>
+          <span class="required">*</span><br>
           <div class="input-image">
             <img src="/assets/img/badges/diamond.png" alt="Bronze Icon" class="input-icon">
             <input id="diamond" name="diamond" type="number" min="1" max="2147483647" step="1"
               onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
           </div>
-          <span class="required">*</span><br>
         </div>
 
         <div class="input-group">
-          <label for="champ">Champ:</label><br>
+          <label for="champ">Champ:</label>
+          <span class="required">*</span><br>
           <div class="input-image">
             <img src="/assets/img/badges/champ.png" alt="Bronze Icon" class="input-icon">
             <input id="champ" name="champ" type="number" min="1" max="2147483647" step="1"
               onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
           </div>
-          <span class="required">*</span><br>
         </div>
       </div>
     </fieldset>

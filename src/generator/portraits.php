@@ -107,7 +107,7 @@ $textareaContent = json_encode($mainJsonObject);
     ?>
     <script src="/assets/js/download.js"></script>
     <script>
-        var filename = 'characters_inventory.json';
+        var filename = 'profile_portrait.json';
     </script>
     <?= $logScript ?>
 </head>
