@@ -50,11 +50,12 @@
       endforeach;
       ?>
     </fieldset>
-    <div class="copy" style="display: inline-block">
+    <!-- <div id="filteredItems"></div> -->
+    <!-- <div class="copy" style="display: inline-block">
       <a class="fa fa-pen-to-square fa-2x" style="cursor: pointer;" href="../editor/character-editor.php">
       </a>
-    </div>
-    <input type="submit" class="btn btn-success" value="Submit">
+    </div> -->
+    <input type="button" class="btn btn-success" value="Submit" onclick="generateUrlFunction()">
   </form>
 
   <script src="/assets/js/search.js"></script>
