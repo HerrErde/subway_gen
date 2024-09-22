@@ -33,10 +33,9 @@ function getItemId($itemNumber, $jsonArray)
             return $item;
         }
     }
-    return null; // Return null if item number not found
+    return null;
 }
 
-// Fetch and decode the json file
 $json_url = 'https://github.com/HerrErde/subway-source/releases/latest/download/boards_data.json';
 $json_data = file_get_contents($json_url);
 $item_data = json_decode($json_data, true);
@@ -56,7 +55,6 @@ if (preg_match_all('/(\d+-\d+|\d+)/', $itemsParam, $matches)) {
 // Decompress the items
 $decompressedItems = decompress($items);
 
-// Initialize an array to store the IDs
 $itemIds = [];
 
 // JavaScript for logging picked items
@@ -81,7 +79,6 @@ if ($selectNumber !== null) {
 
 $logScript .= '</script>';
 
-// Initialize an array to store the datalist objects
 $datalist = [];
 
 // Generate datalist objects for each selected item
@@ -109,13 +106,12 @@ foreach ($decompressedItems as $item) {
     }
 }
 
-// Construct the main JSON object
 $mainJsonObject = [
     "version" => 3,
     "data" => "{\"selected\":\"$selectedItemId\",\"owned\":" . json_encode($datalist) . "}",
 ];
 
-// Convert the main JSON object to a string and remove spaces
+// convert object to string and remove spaces
 $textareaContent = json_encode($mainJsonObject);
 ?>
 
@@ -130,7 +126,7 @@ $textareaContent = json_encode($mainJsonObject);
     ?>
     <script src="/assets/js/download.js"></script>
 
-    <?= $logScript ?> <!-- Include the JavaScript for logging -->
+    <?= $logScript ?>
     <script>
         var filename = 'boards_inventory.json';
     </script>

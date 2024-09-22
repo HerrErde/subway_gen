@@ -23,35 +23,48 @@
     <fieldset>
       <div>
         <legend class="gamedata-title">Game data</legend>
-        <label for="hoverboards">Hoverboards:</label><br>
-        <input id="hoverboards" name="hoverboards" type="number" min="1" max="2147483647" step="1"
-          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-        <span class="required">*</span><br>
 
-        <label for="gamekeys">Game keys:</label><br>
-        <input id="gamekeys" name="gamekeys" type="number" min="1" max="2147483647" step="1"
-          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-        <span class="required">*</span><br>
+        <div>
+          <label for="hoverboards">Hoverboards:</label>
+          <span class="required">*</span><br>
+          <input id="hoverboards" name="hoverboards" type="number" min="1" max="2147483647" step="1"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+        </div>
 
-        <label for="gamecoins">Game coins:</label><br>
-        <input id="gamecoins" name="gamecoins" type="number" min="1" max="2147483647" step="1"
-          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-        <span class="required">*</span><br>
+        <div>
+          <label for="gamekeys">Game keys:</label>
+          <span class="required">*</span><br>
+          <input id="gamekeys" name="gamekeys" type="number" min="1" max="2147483647" step="1"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+        </div>
 
-        <label for="scoreboosters">Score Boosters:</label><br>
-        <input id="scoreboosters" name="scoreboosters" type="number" min="1" max="2147483647" step="1"
-          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-        <span class="required">*</span><br>
+        <div>
+          <label for="gamecoins">Game coins:</label>
+          <span class="required">*</span><br>
+          <input id="gamecoins" name="gamecoins" type="number" min="1" max="2147483647" step="1"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+        </div>
 
-        <label for="headstarts">Headstarts:</label><br>
-        <input id="headstarts" name="headstarts" type="number" min="1" max="2147483647" step="1"
-          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-        <span class="required">*</span><br>
+        <div>
+          <label for="scoreboosters">Score Boosters:</label>
+          <span class="required">*</span><br>
+          <input id="scoreboosters" name="scoreboosters" type="number" min="1" max="2147483647" step="1"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+        </div>
 
-        <label for="eventcoins">Eventcoins:</label><br>
-        <input id="eventcoins" name="eventcoins" type="number" min="1" max="2147483647" step="1"
-          onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-        <span class="required">*</span><br>
+        <div>
+          <label for="headstarts">Headstarts:</label>
+          <span class="required">*</span><br>
+          <input id="headstarts" name="headstarts" type="number" min="1" max="2147483647" step="1"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+        </div>
+
+        <div>
+          <label for="eventcoins">Eventcoins:</label>
+          <span class="required">*</span><br>
+          <input id="eventcoins" name="eventcoins" type="number" min="1" max="2147483647" step="1"
+            onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+        </div>
       </div>
     </fieldset>
 
@@ -60,7 +73,7 @@
     </div>
 
     <div class="copy" style="display: inline-block">
-      <a class="fa fa-pen-to-square fa-2x" style="cursor: pointer;" href="../editor/wallet-editor.php"></a>
+      <a class="fa fa-pen-to-square fa-2x" style="cursor: pointer;" href="../editor/wallet.php"></a>
     </div>
     <input type="submit" class="btn btn-success" value="Submit">
   </form>

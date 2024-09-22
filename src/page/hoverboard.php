@@ -32,9 +32,6 @@
       $json_data = file_get_contents("https://github.com/HerrErde/subway-source/releases/latest/download/boards_links.json");
       $items = json_decode($json_data);
 
-      // Add a counter to track default checkboxes
-      $defaultCounter = 0;
-
       foreach ($items as $item): ?>
         <div class="item">
           <label class="custom-checkbox">
@@ -50,13 +47,11 @@
           <img src="<?= $item->img_url ?>" alt="<?= $item->name ?>">
         </div>
         <?php
-        // Increase default counter if a default checkbox is added
-        $defaultCounter++;
       endforeach;
       ?>
     </fieldset>
-    <div id="filteredItems"></div>
-    <input type="button" class="btn btn-success" value="Generate URL" onclick="generateUrlFunction()">
+    <!-- <div id="filteredItems"></div> -->
+    <input type="button" class="btn btn-success" value="Submit" onclick="generateUrlFunction()">
   </form>
 
   <script src="/assets/js/search.js"></script>

@@ -21,10 +21,10 @@
       <div>
         <legend class="gamedata-title">Game data</legend>
         <div>
-          <label>Highscore:</label><br>
+          <label>Highscore:</label>
+          <span class="required">*</span>
           <input type="number" name="highscore" type="number" min="0" max="9223372036854775807" step="1"
             onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
-          <span class="required">*</span><br>
         </div>
         <div>
           <label for="userstats">Stats Score:</label>
@@ -36,19 +36,22 @@
 
         <div>
           <label for="userstatsAmount">Stats Score Amount:</label>
+          <span id="userstatsreq" class="required"></span>
           <input type="number" name="userstatsAmount" id="userstatsAmount" type="number" min="0" max="2147483647"
             step="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required disabled>
-          <span class="required">*</span>
         </div>
       </div>
+
       <script>
         const userstats = document.getElementById('userstats');
-        const userstatsAmount =
-          document.getElementsByName('userstatsAmount')[0];
+        const userstatsAmount = document.getElementById('userstatsAmount');
+        const requiredSpan = document.getElementById('userstatsreq');
 
         userstats.addEventListener('change', () => {
           userstatsAmount.disabled = !userstats.checked;
+          requiredSpan.textContent = userstats.checked ? '*' : '';
         });
+
       </script>
     </fieldset>
     <input type="submit" class="btn btn-success" value="Submit">

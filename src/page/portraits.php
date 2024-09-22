@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-error_reporting(E_ERROR | E_PARSE);
-// Fetch and decode the JSON data from the GitHub API
-$json = json_decode(file_get_contents("https://api.github.com/repos/HerrErde/subway-source/releases/latest", false, stream_context_create(['http' => ['header' => "User-Agent: PHP"]])), true);
-
-// Check the version and prepare the warning message
-$warningMessage = ($json['tag_name'] == "3-34-0") ? "Generation will be inaccurate until the next version." : "";
-
-echo "<script>
-          document.addEventListener('DOMContentLoaded', function() {
-            if ('$warningMessage' !== '') {
-              document.getElementById('title').innerHTML += '<p style=\"color: red;\">$warningMessage</p>';
-            }
-          });
-        </script>";
-?>
-
 <head>
   <title>Generate your Characters</title>
   <?php
@@ -67,9 +50,8 @@ echo "<script>
       ?>
     </fieldset>
     <div id="filteredItems"></div>
-    <input type="button" class="btn btn-success" value="Generate URL" onclick="generateUrlFunction()">
+    <input type="button" class="btn btn-success" value="Submit" onclick="generateUrlFunction()">
   </form>
-
 
   <script src="/assets/js/search.js"></script>
   <script src="/assets/js/selall.js"></script>

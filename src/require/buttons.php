@@ -9,7 +9,7 @@ if (!isset($activePage)) {
     <?php
     $buttons = [
         ['url' => '/index.php', 'name' => 'Home', 'active' => $activePage == "index"],
-        ['url' => '/page/wallet.php', 'name' => 'Wallet', 'active' => $activePage == "wallet" || $activePage == "wallet-editor"],
+        ['url' => '/page/wallet.php', 'name' => 'Wallet', 'active' => $activePage == "wallet"],
         ['url' => '/page/character.php', 'name' => 'Characters', 'active' => $activePage == "character"],
         ['url' => '/page/hoverboard.php', 'name' => 'Hoverboards', 'active' => $activePage == "hoverboard"],
         ['url' => '/page/portraits.php', 'name' => 'Portraits', 'active' => $activePage == "portraits"],

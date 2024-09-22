@@ -8,7 +8,7 @@ if (!empty($errors)) {
 }
 
 
-// Function to decompress the compressed data
+// decompress the compressed data
 function decompress($compressed)
 {
     $decompressed = [];
@@ -33,7 +33,7 @@ function getItemId($itemNumber, $jsonArray)
             return $item;
         }
     }
-    return null; // Return null if item number not found
+    return null;
 }
 
 // Fetch and decode the json file
@@ -56,10 +56,9 @@ if (preg_match_all('/(\d+-\d+|\d+)/', $itemsParam, $matches)) {
 // Decompress the items
 $decompressedItems = decompress($items);
 
-// Initialize an array to store the IDs
 $itemIds = [];
 
-// JavaScript for logging picked items
+// logging picked items
 $logScript = '<script>';
 foreach ($decompressedItems as $item) {
     $item = getItemId($item, $item_data);
@@ -81,7 +80,6 @@ if ($selectNumber !== null) {
 
 $logScript .= '</script>';
 
-// Initialize an array to store the datalist objects
 $datalist = [];
 
 // Generate datalist objects for each selected item
@@ -109,7 +107,6 @@ foreach ($decompressedItems as $item) {
     }
 }
 
-// Construct the main JSON object
 $mainJsonObject = [
     "version" => 3,
     "data" => "{\"selected\":{\"character\":\"$selectedItemId\",\"outfit\":\"default\"},\"owned\":" . json_encode($datalist) . "}",
@@ -132,7 +129,7 @@ $textareaContent = json_encode($mainJsonObject);
     <script>
         var filename = 'characters_inventory.json';
     </script>
-    <?= $logScript ?> <!-- Include the JavaScript for logging -->
+    <?= $logScript ?>
 </head>
 
 <body>
