@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Generate your Boards</title>
+  <title>Generate your Hoverboards</title>
   <?php
   $activePage = basename(__FILE__, '.php');
   require "../require/connect.php";
@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <h1>Generate your Boards</h1>
+    <h1>Generate your Hoverboards</h1>
     <p id="title">Fill out the options and generate your customized JSON template code.</p>
     <!-- Select All Checkbox -->
     <label class="custom-checkbox">

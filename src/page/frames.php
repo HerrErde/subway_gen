@@ -3,7 +3,7 @@
 
 
 <head>
-  <title>Generate your Characters</title>
+  <title>Generate your Playerprofile</title>
   <?php
   $activePage = basename(__FILE__, '.php');
   require "../require/connect.php";

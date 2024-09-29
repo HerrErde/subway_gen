@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Generate your Wallet</title>
+  <title>Generate your Playerprofile</title>
   <?php
   $activePage = basename(__FILE__, '.php');
   require "../require/connect.php";
@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <h1>Generate your Profile</h1>
+    <h1>Generate your Playerprofile</h1>
     <p id="title">
       Fill out the options and generate your customized JSON template code.
     </p>

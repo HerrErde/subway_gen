@@ -100,7 +100,7 @@ $textareaContent = json_encode($mainJsonObject);
 <html lang="en">
 
 <head>
-    <title>Code for the characters_inventory.json file</title>
+    <title>Code for the profile_portrait.json file</title>
     <?php
     $activePage = basename(__FILE__, '.php');
     require "../require/connect.php";
@@ -114,9 +114,9 @@ $textareaContent = json_encode($mainJsonObject);
 
 <body>
     <header>
-        <h1>Code for your Character Inventory</h1>
+        <h1>Code for your Playerprofile</h1>
         <p id="title">
-            Download or copy the generated code, find the file characters_inventory.json in the
+            Download or copy the generated code, find the file profile_portrait.json in the
             folder "profile" and paste it there.
         </p>
         <p id="warning">

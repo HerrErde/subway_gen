@@ -52,7 +52,7 @@ if (!empty($errors)) {
   <header>
     <h1>Code for the upgrades.json file</h1>
     <p id="title">
-      Download or copy the generated code, find the file wallet.json in the
+      Download or copy the generated code, find the file upgrades.json in the
       folder "profile" and paste it there.
     </p>
     <p id="warning">

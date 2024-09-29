@@ -8,22 +8,29 @@
 </head>
 
 <body>
-  <h2>Android Tutorial</h2>
-  <ol style="display: grid; place-items: center">
-    <li>
-      Download
-      <a href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf"
-        style="color: lightgreen; text-decoration: underline">Subway Surfers</a>.
-    </li>
-    <li>Open your file manager app.</li>
-    <li>Navigate between the folders.</li>
-    <li>Android > data > com.kiloo.subwaysurf > files > profile</li>
-    <li>
-      Download or copy the generated code, find the file in the folder
-      "profile" and paste it there.
-    </li>
-  </ol>
-  <h2>Available generators</h2>
+  <div>
+    <p style="place-items: center">
+      You can use <a href="https://github.com/HerrErde/SubwayBooster/releases"
+        style="color: lightcoral; text-decoration: underline">SubwayBooster</a> for pre generated save files.
+    </p>
+  </div>
+  <div>
+    <h2>Android Tutorial</h2>
+    <ol style="display: grid; place-items: center">
+      <li>
+        Download
+        <a href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf"
+          style="color: lightgreen; text-decoration: underline">Subway Surfers</a>.
+      </li>
+      <li>Open your file manager app.</li>
+      <li>Navigate between the folders.</li>
+      <li>Android > data > com.kiloo.subwaysurf > files > profile</li>
+      <li>
+        Download or copy the generated code, find the file in the folder
+        "profile" and paste it there.
+      </li>
+    </ol>
+  </div>
   <?php
   error_reporting(E_ERROR | E_PARSE);
   $url = "https://raw.githubusercontent.com/HerrErde/SubwayBooster/master/src/version.json";

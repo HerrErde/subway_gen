@@ -134,7 +134,7 @@ $textareaContent = json_encode($mainJsonObject);
 
 <body>
     <header>
-        <h1>Code for your Board Inventory</h1>
+        <h1>Code for your Hoverboard Inventory</h1>
         <p id="title">
             Download or copy the generated code, find the file boards_inventory.json in the
             folder "profile" and paste it there.
