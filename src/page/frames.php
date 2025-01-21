@@ -34,7 +34,7 @@
       foreach ($items->Frames as $item): ?>
         <div class="item">
           <label class="custom-checkbox">
-            <input class="select-checkbox" type="checkbox" name="item[]" value="<?= $counter ?>">
+            <input class="select-checkbox" type="checkbox" value="<?= $counter ?>">
             <span class="checkmark"></span>
             <?= $item->name ?>
           </label>

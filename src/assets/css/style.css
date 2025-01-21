@@ -259,9 +259,6 @@ input[type='checkbox'].item {
   text-decoration: none;
   transition-duration: 0.2s;
 }
-.btn:hover:not() {
-  text-decoration: none;
-}
 .btn-primary {
   background-color: #3c45a3;
 }

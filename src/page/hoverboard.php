@@ -35,7 +35,7 @@
       foreach ($items as $item): ?>
         <div class="item">
           <label class="custom-checkbox">
-            <input class="select-checkbox" type="checkbox" name="item[]" value="<?= $item->number ?>">
+            <input class="select-checkbox" type="checkbox" value="<?= $item->number ?>">
             <span class="checkmark"></span>
             <?= $item->name ?>
           </label>
