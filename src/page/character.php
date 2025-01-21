@@ -55,6 +55,9 @@
       <a class="fa fa-pen-to-square fa-2x" style="cursor: pointer;" href="../editor/character.php">
       </a>
     </div> -->
+    <div class="copy" style="display: inline-block">
+      <a class="fa fa-pen-to-square fa-2x" style="cursor: pointer;" href="../editor/character.php"></a>
+    </div>
     <input type="button" class="btn btn-success" value="Submit" onclick="generateUrlFunction()">
   </form>
 

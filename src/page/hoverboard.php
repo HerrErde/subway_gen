@@ -51,6 +51,9 @@
       ?>
     </fieldset>
     <!-- <div id="filteredItems"></div> -->
+    <div class="copy" style="display: inline-block">
+      <a class="fa fa-pen-to-square fa-2x" style="cursor: pointer;" href="../editor/hoverboard.php"></a>
+    </div>
     <input type="button" class="btn btn-success" value="Submit" onclick="generateUrlFunction()">
   </form>
 
