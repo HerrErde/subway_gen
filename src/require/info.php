@@ -74,7 +74,7 @@
       <div>
         <span>Supported App Version:</span>
         <span>
-          <?= displayValue($json["appversion"]) ?>
+          <?= displayValue($json["version"]) ?>
         </span>
       </div>
     </div>
