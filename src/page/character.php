@@ -9,6 +9,7 @@
   require "../require/buttons.php";
   ?>
   <link rel="stylesheet" href="/assets/css/gen.css">
+  <script src="/assets/js/load-scroll.js"></script>
 </head>
 
 <body>
@@ -22,8 +23,7 @@
       Select All
     </label>
 
-    <!-- Search input field -->
-    <!-- <input type="text" id="searchInput" placeholder="Search..." oninput="filterItems()">-->
+    <input type="text" id="searchInput" placeholder="Search..." oninput="filterItems()">
   </header>
 
   <form id="form">
@@ -31,6 +31,7 @@
       <?php
       $json_data = file_get_contents("https://github.com/HerrErde/subway-source/releases/latest/download/characters_links.json");
       $items = json_decode($json_data);
+      $fallback_img = "https://static.wikia.nocookie.net/subwaysurf/images/d/da/MissingSurfer1.png";
 
       foreach ($items as $item): ?>
         <div class="item">
@@ -44,17 +45,13 @@
             <span class="checkmark"></span>
             Default
           </label><br>
-          <img src="<?= $item->img_url ?>" alt="<?= $item->name ?>">
+          <img data-src="<?= $item->img_url ?>" src="<?= $fallback_img ?>" alt="<?= $item->name ?>"
+            onerror="this.onerror=null; this.src='<?= $fallback_img ?>';">
         </div>
         <?php
       endforeach;
       ?>
     </fieldset>
-    <!-- <div id="filteredItems"></div> -->
-    <!-- <div class="copy" style="display: inline-block">
-      <a class="fa fa-pen-to-square fa-2x" style="cursor: pointer;" href="../editor/character.php">
-      </a>
-    </div> -->
     <div class="copy" style="display: inline-block">
       <a class="fa fa-pen-to-square fa-2x" style="cursor: pointer;" href="../editor/character.php"></a>
     </div>

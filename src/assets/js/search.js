@@ -1,49 +1,43 @@
 function filterItems() {
-  // Get the input value and convert it to lowercase
-  var input = document.getElementById('searchInput').value.toLowerCase();
+  const input = document.getElementById("searchInput").value;
+  const items = document.getElementsByClassName("item");
 
-  // Get the items and filteredItems div
-  var items = document.getElementsByClassName('item');
-  var filteredItems = document.getElementById('filteredItems');
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    const label = item.querySelector("label.custom-checkbox");
+    const nameNode = label.childNodes[label.childNodes.length - 1];
+    const originalName = nameNode.textContent.trim();
 
-  // If the input is empty, remove the filter from all items and show them
-  if (input.trim() === '') {
-    for (var i = 0; i < items.length; i++) {
-      var item = items[i];
-      item.style.display = '';
-      item.classList.remove('filtered');
-      item.style.filter = ''; // Remove the gray filter
-      var images = item.getElementsByTagName('img');
-      for (var j = 0; j < images.length; j++) {
-        images[j].style.filter = ''; // Remove the gray filter from the images
-      }
+    // reset highlight
+    nameNode.textContent = originalName;
+
+    if (input.trim() === "") {
+      item.style.display = "";
+      item.style.filter = "";
+      item.classList.remove("filtered");
+      const imgs = item.getElementsByTagName("img");
+      for (const img of imgs) img.style.filter = "";
+      continue;
     }
-    filteredItems.innerHTML = '';
-  } else {
-    // Loop through the items and check if they contain the input string
-    for (var i = 0; i < items.length; i++) {
-      var item = items[i];
-      var label = item.getElementsByTagName('label')[0];
-      var name = label.textContent || label.innerText;
 
-      // If the item contains the input string, show it and remove the gray filter; otherwise, hide it and add the filtered class
-      if (name.toLowerCase().includes(input)) {
-        item.style.display = '';
-        item.style.filter = ''; // Remove the gray filter
-        filteredItems.appendChild(item);
-        var images = item.getElementsByTagName('img');
-        for (var j = 0; j < images.length; j++) {
-          images[j].style.filter = ''; // Remove the gray filter from the images
-        }
-      } else {
-        item.style.display = 'none';
-        item.classList.add('filtered');
-        item.style.filter = 'grayscale(100%)'; // Add a gray filter
-        var images = item.getElementsByTagName('img');
-        for (var j = 0; j < images.length; j++) {
-          images[j].style.filter = 'grayscale(100%)'; // Add a gray filter to the images
-        }
-      }
+    const regex = new RegExp(`(${input})`, "gi");
+    if (regex.test(originalName)) {
+      item.style.display = "";
+      item.style.filter = "";
+      item.classList.remove("filtered");
+
+      const temp = document.createElement("span");
+      temp.innerHTML = originalName.replace(regex, "<mark>$1</mark>");
+      nameNode.replaceWith(temp);
+
+      const imgs = item.getElementsByTagName("img");
+      for (const img of imgs) img.style.filter = "";
+    } else {
+      item.style.display = "none";
+      item.classList.add("filtered");
+      item.style.filter = "grayscale(100%)";
+      const imgs = item.getElementsByTagName("img");
+      for (const img of imgs) img.style.filter = "grayscale(100%)";
     }
   }
 }

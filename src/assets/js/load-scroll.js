@@ -1,31 +1,36 @@
-// Get all the images with data-src attribute
-const images = document.querySelectorAll('img[data-src]');
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll("img[data-src]");
+  const fallbackImg =
+    "//wsrv.nl/?url=static.wikia.nocookie.net/subwaysurf/images/d/da/MissingSurfer1.png&w=300&h=300";
 
-// Set the options for the Intersection Observer
-const options = {
-  root: null, // Observe in relation to the viewport
-  rootMargin: '0px',
-  threshold: 0.01, // Load as soon as 1% of the image is visible
-  once: true // Unobserve after the first time intersection occurs
-};
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          const imgUrl = img.dataset.src;
 
-// Define the callback function for the Intersection Observer
-const callback = (entries, observer) => {
-  entries.forEach((entry) => {
-    // If the image is intersecting the viewport, load it
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-      observer.unobserve(img);
+          if (imgUrl) {
+            img.src = imgUrl;
+            img.removeAttribute("data-src");
+          }
+
+          img.onerror = () => {
+            img.onerror = null;
+            img.src = fallbackImg;
+          };
+
+          observer.unobserve(img);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1,
+      once: true
     }
-  });
-};
+  );
 
-// Create the Intersection Observer instance
-const observer = new IntersectionObserver(callback, options);
-
-// Observe all the images
-images.forEach((image) => {
-  observer.observe(image);
+  images.forEach((img) => observer.observe(img));
 });

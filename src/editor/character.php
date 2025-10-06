@@ -9,6 +9,7 @@
   require '../require/buttons.php';
   ?>
   <link rel="stylesheet" href="/assets/css/gen.css">
+  <script src="/assets/js/load-scroll.js"></script>
   <style>
     body.dragging {
       background-color: #f0f0f0;
@@ -131,6 +132,7 @@
       // PHP code to dynamically generate checkboxes based on characters_links.json
       $json_data = file_get_contents('https://github.com/HerrErde/subway-source/releases/latest/download/characters_links.json');
       $items = json_decode($json_data);
+      $fallback_img = "https://static.wikia.nocookie.net/subwaysurf/images/d/da/MissingSurfer1.png";
 
       foreach ($items as $item):
         ?>
@@ -145,7 +147,8 @@
             <span class="checkmark"></span>
             Default
           </label><br>
-          <img src="<?= $item->img_url ?>" alt="<?= $item->name ?>">
+          <img data-src="<?= $item->img_url ?>" src="<?= $fallback_img ?>" alt="<?= $item->name ?>"
+            onerror="this.onerror=null; this.src='<?= $fallback_img ?>';">
         </div>
       <?php endforeach; ?>
     </fieldset>
